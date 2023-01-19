@@ -3,22 +3,151 @@
     <id>https://conless.github.io</id>
     <title>Hexo</title>
     <link href="https://conless.github.io" />
-    <updated>1970-01-01T00:00:00.000Z</updated>
+    <updated>2023-01-19T14:56:00.000Z</updated>
     <entry>
-        <id>https://conless.github.io/1970/01/01/hello-world</id>
-        <title>Hello World</title>
-        <link rel="alternate" href="https://conless.github.io/1970/01/01/hello-world"/>
-        <content type="html">&lt;p&gt;Welcome to &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvLw==&#34;&gt;Hexo&lt;/span&gt;! This is your very first post. Check &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mv&#34;&gt;documentation&lt;/span&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3MvdHJvdWJsZXNob290aW5nLmh0bWw=&#34;&gt;troubleshooting&lt;/span&gt; or you can ask me on &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvL2lzc3Vlcw==&#34;&gt;GitHub&lt;/span&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;quick-start&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#quick-start&#34;&gt;#&lt;/a&gt; Quick Start&lt;/h2&gt;
-&lt;h3 id=&#34;create-a-new-post&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#create-a-new-post&#34;&gt;#&lt;/a&gt; Create a new post&lt;/h3&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;span&gt;h&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;$ hexo new &lt;span class=&#34;token string&#34;&gt;&#34;My New Post&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvd3JpdGluZy5odG1s&#34;&gt;Writing&lt;/span&gt;&lt;/p&gt;
-&lt;h3 id=&#34;run-server&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#run-server&#34;&gt;#&lt;/a&gt; Run server&lt;/h3&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;span&gt;h&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;$ hexo server&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvc2VydmVyLmh0bWw=&#34;&gt;Server&lt;/span&gt;&lt;/p&gt;
-&lt;h3 id=&#34;generate-static-files&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#generate-static-files&#34;&gt;#&lt;/a&gt; Generate static files&lt;/h3&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;span&gt;h&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;$ hexo generate&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3MvZ2VuZXJhdGluZy5odG1s&#34;&gt;Generating&lt;/span&gt;&lt;/p&gt;
-&lt;h3 id=&#34;deploy-to-remote-sites&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#deploy-to-remote-sites&#34;&gt;#&lt;/a&gt; Deploy to remote sites&lt;/h3&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;span&gt;h&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;$ hexo deploy&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvb25lLWNvbW1hbmQtZGVwbG95bWVudC5odG1s&#34;&gt;Deployment&lt;/span&gt;&lt;/p&gt;
+        <id>https://conless.github.io/2023/01/hello-world</id>
+        <title>Hello, World!</title>
+        <link rel="alternate" href="https://conless.github.io/2023/01/hello-world"/>
+        <content type="html">&lt;p&gt;欢迎来到 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9jb25sZXNzLmxpZmU=&#34;&gt;Conless 的新博客&lt;/span&gt;！本博客使用 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlv&#34;&gt;Hexo&lt;/span&gt; 搭建，采用了 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zaG9rYS5sb3N0eXUubWUv&#34;&gt;Shoka&lt;/span&gt; 主题，希望大家喜欢。&lt;/p&gt;
+&lt;h2 id=&#34;搭建过程&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#搭建过程&#34;&gt;#&lt;/a&gt; 搭建过程&lt;/h2&gt;
+&lt;h3 id=&#34;安装并配置-hexo&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装并配置-hexo&#34;&gt;#&lt;/a&gt; 安装并配置 Hexo&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;安装 Git, Node&lt;/li&gt;
+&lt;li&gt;安装 hexo-cli&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;npm&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-g&lt;/span&gt; hexo-cli&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;初始化项目&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;hexo init conless.github.io&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token builtin class-name&#34;&gt;cd&lt;/span&gt; conless.github.io&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;npm&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;hexo server&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;接下来就可以通过访问 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sb2NhbGhvc3Q6NDAwMA==&#34;&gt;https://localhost:4000&lt;/span&gt; 访问博客了.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;配置-shoka&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#配置-shoka&#34;&gt;#&lt;/a&gt; 配置 Shoka&lt;/h3&gt;
+&lt;p&gt;首先安装主题与依赖插件&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; clone https://github.com/amehime/hexo-theme-shoka.git ./themes/shoka&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;npm&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;--save&lt;/span&gt; hexo-renderer-multi-markdown-it hexo-autoprefixer hexo-algoliasearch hexo-symbols-count-time hexo-feed&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;再修改站点配置&lt;/p&gt;
+&lt;figure class=&#34;highlight yml&#34;&gt;&lt;figcaption data-lang=&#34;YAML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key atrule&#34;&gt;theme&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; shoka&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;并新建 _config.shoka.yml&lt;/p&gt;
+&lt;p&gt;接下来可以进行相关配置，完成后通过&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;hexo g &lt;span class=&#34;token parameter variable&#34;&gt;-d&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;传到远端即完成了建站。&lt;/p&gt;
+&lt;h3 id=&#34;github-pages-与自定义域名&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#github-pages-与自定义域名&#34;&gt;#&lt;/a&gt; GitHub Pages 与自定义域名&lt;/h3&gt;
+&lt;figure class=&#34;highlight cpp&#34;&gt;&lt;figcaption data-lang=&#34;C++&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;// TODO&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;blog-更新日志与计划&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#blog-更新日志与计划&#34;&gt;#&lt;/a&gt; Blog 更新日志与计划&lt;/h2&gt;
+&lt;h3 id=&#34;todo&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#todo&#34;&gt;#&lt;/a&gt; TODO&lt;/h3&gt;
+&lt;p&gt;upd on 23/01/19&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;博文和图片的迁移&lt;/li&gt;
+&lt;li&gt;完善前端配置&lt;/li&gt;
+&lt;li&gt;补笔记&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;日志&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#日志&#34;&gt;#&lt;/a&gt; 日志&lt;/h3&gt;
+&lt;p&gt;23/01/19：将博客迁移到了 GitHub Pages，并通过 Hexo + Shoka 进行配置&lt;br&gt;
+ 23/12/24：停止 wpbox 续费&lt;br&gt;
+ 22/12/10：因为 wpbox 托管更换域名，博客访问中断&lt;br&gt;
+ 22/09/03：将博客内容备份在了微信公众号&lt;br&gt;
+ 22/06/12：更新了 wordpress 主题&lt;br&gt;
+ 22/01/24：将博客迁移到了 wpbox 进行 wordpress 托管&lt;br&gt;
+ 21/02/06：博客停止更新&lt;br&gt;
+ 20/09/04：Luogu 博客开始进行同步更新&lt;br&gt;
+ 19/08/13：将博客迁移到了 cnblogs&lt;br&gt;
+16/12/02：在 csdn 建立了第一个博客&lt;/p&gt;
 </content>
-        <updated>1970-01-01T00:00:00.000Z</updated>
+        <updated>2023-01-19T14:56:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://conless.github.io/2022/07/gaokao-summary</id>
+        <title>尘埃落定</title>
+        <link rel="alternate" href="https://conless.github.io/2022/07/gaokao-summary"/>
+        <content type="html">&lt;p&gt;&lt;img data-src=&#34;https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220705232021.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;不管怎么样，明天又是新的起点。—— 玛格丽特・米切尔《飘》&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;高考差 2 分，强基差 0.1 分，恐怕，这也就是命运吧。&lt;/p&gt;
+&lt;p&gt;昨晚躺在床上，回顾着自己这一个月来，两场最重要的考试里，丢掉的那些分数。“但是这大抵也不是件坏事。” 我对自己说。去一个自己更加喜欢的城市，读一个自己更想学的专业…… 有许多的理由让我为丢掉的这几分而庆幸。&lt;/p&gt;
+&lt;p&gt;而最重要的是，&lt;strong&gt;抛下过去那一份受虚荣心左右的自信。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;和身边的人相比怎么样、取得了怎样的荣誉、被别人怎么看待、是否有损自己的形象…… 这样的想法大概贯穿我的整个中学时代，无论是学习还是社交，总在因这些事情而困扰。最终的结果就像一些老师和同学对我的评价那样，“不够纯粹与专注”。&lt;/p&gt;
+&lt;p&gt;最近一个月来大概更是如此，总是幻想着清北那个至高无上的 title，期待着名校光环。最极端的时候，甚至梦到过选择提前批进 tp 从而享受赞誉。但这是自己真正想要做的事吗？显然不是。&lt;/p&gt;
+&lt;p&gt;所以在昨天最后想清楚，不会服从调剂去其它专业的时候，&lt;strong&gt;有遗憾，但更多的是解脱。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;因为，只有自己真正热爱的事物，才能让自己彻底摆脱光环、荣誉与目光的束缚，获得真正的自信。我很喜欢上海这座城市，很喜欢电子计算机领域，EE AI CS，也相信自己的实力与内驱动力，那即使不在最顶尖的学府，又何妨呢？&lt;/p&gt;
+&lt;p&gt;昨天刷到交大 18 级的学长，计算机系综合排名第一的 cxs 的文章，倒是觉得深有启发，写在这里作结与诸君共勉。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;可能做 system engineer 的种子在很早以前就埋下了，只是到了大学才开始发芽，在冥冥中指引着我的道路。写代码从我单纯的兴趣，变成了我生活不可或缺的一部分。&lt;br&gt;
+希望几年以后，我依然可以：build things that interest me, excite me, and impact people.&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+        <updated>2022-07-05T15:19:14.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://conless.github.io/2022/06/senior-summary</id>
+        <title>高中总结（一）</title>
+        <link rel="alternate" href="https://conless.github.io/2022/06/senior-summary"/>
+        <content type="html">&lt;blockquote&gt;
+&lt;p&gt;过往岁月最后的存留地，便是它的精粹，让我们在泪水流干之后，又重新潸然泪下。&lt;br&gt;
+—— 普鲁斯特《追忆似水年华》&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;“低温下依旧能保持较高的活性”，嗯，这应该就是能填的唯一答案了。我在心里对自己说。&lt;/p&gt;
+&lt;p&gt;检查完生物选修大题的最后一空，看向半个月前刚为了高考买的石英表；&lt;/p&gt;
+&lt;p&gt;时针和分针恰好共线却背道而驰，丝毫不差地将表盘竖直等分。&lt;/p&gt;
+&lt;p&gt;刚好敲响了 15 分钟倒计时，“倒还精准”，我想。&lt;/p&gt;
+&lt;p&gt;按上笔帽，这只陪伴了我整个高考的百乐果汁笔，墨水也基本耗尽。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://pica.zhimg.com/80/v2-1e00770e407909459fed58052829e854_720w.jpeg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;今年广东卷的生物并不困难，放下笔翻动试卷的声音陆续传来；望向左侧窗外，阵雨后的初晴倒让傍晚广州的天空增添一抹光芒。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://pic1.zhimg.com/80/v2-60d1a49e9f70c3a31e9ab191cd523926_720w.jpeg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;我想起了，去年的这个时候，那应该是在同一个位置下一层楼的考场，正对着那几道令人不知所措的 4 分题纠结。恍惚间，一年的光阴又从指尖流过。我想起了，三年前，一个人从住了十余年的邻近小城走向省城求学，遇到全能全才的同学们时对自己格局眼界受限的震撼。刹那间，懵懂少年又走完了一段征程……&lt;/p&gt;
+&lt;p&gt;过往岁月的残花旧梦易逝，青春年华的雪泥鸿爪难留，唯有以文字的片刻让它们记载留存，方能在未来的某一个片刻重获触动心灵的记忆。&lt;/p&gt;
+&lt;p&gt;身边总有很多人认为，高中三年就是高考的预备役，一切的时光，都是因高考而被赋予了意义。但在我看来，在省实的三年给予我的，比起那些终将忘记的知识和应试套路，更多的是真心而感性的记忆与感动。所以我想，首先值得回忆的，大概是三年来，我所爱过的人与事。&lt;/p&gt;
+&lt;h2 id=&#34;f21&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#f21&#34;&gt;#&lt;/a&gt; F21&lt;/h2&gt;
+&lt;p&gt;如果加的限定词足够多 (bushi)，那么可以说，这大概是省实的第一个与最后一个南山竞赛 21 班。在这里，我经历过孤独与不满，但更多的是喜悦与欢乐。所以我想，这大概是我高中三年里，最爱的一个地方，最爱的一群人。&lt;br&gt;
+这大概是我 12 年求学生涯里最 “奇葩” 的一个班：男女比 32:5，数理乱杀文科躺平。刚来的时候，甚至还曾经自闭于一直引以为豪的数学物理。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://pic1.zhimg.com/80/v2-144702f507fd390d068df64b92f6da51_720w.jpeg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;但慢慢地，我在这个班发现了一大批志趣爱好相投的同学，大家也都很善良很友好：遇到理科难题的时候，总是在和大家的讨论中找到方向；而相对薄弱的文科，也总有高手指点迷津。在学习以外，更从来不缺乏快乐的氛围，即使是高三的最后一个学期，也一如既往地天天聚众运动娱乐，“完全没有一点高考前的样子”——cj。可以说，如果没有这个班集体，我不可能做到在这么一个理应紧张的时间段依旧保持最良好的心态，不可能在高考过程中始终淡定乐观。&lt;br&gt;
+&lt;img data-src=&#34;https://pic2.zhimg.com/80/v2-ed4ad6d0fccbc60e2a12a4157a79b948_720w.jpeg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;而比起对我个人的帮助，更令人无法忘怀的则是在这个班收获的友谊。我不会忘记每一个周末留宿的晚上和大家一起看电影看番的日子与在宿舍狼人杀聊天的夜晚，不会忘记大半个班一起踢球打球的盛况和我们一起搭建的教室 “乒乓球台” 和走廊 “足球场”（感谢一波校领导高二分配的一整层南山楼和高三的一整层德政楼 /doge）…… 希望我们未来能常常相聚，重温那些共同度过的欢乐时光。&lt;/p&gt;
+&lt;center&gt;
+    &lt;img style=&#34;border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);&#34; 
+    data-src=&#34;https://pica.zhimg.com/80/v2-48ded17771b588082df9399144a6da52_720w.jpeg&#34;&gt;
+    &lt;br&gt;
+    &lt;div style=&#34;color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;&#34;&gt;因为踢球吃教育警告合集（被球挡住了 nice&lt;/div&gt;
+&lt;/center&gt;
+&lt;center&gt;
+    &lt;img style=&#34;border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);&#34; 
+    data-src=&#34;https://pic3.zhimg.com/80/v2-7aac7667a9b3c48e135be40f0678afd5_720w.jpeg&#34;&gt;
+    &lt;br&gt;
+    &lt;div style=&#34;color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;&#34;&gt;高考前的最后一话间谍过家家！&lt;/div&gt;
+&lt;/center&gt;
+&lt;h2 id=&#34;love-friendship&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#love-friendship&#34;&gt;#&lt;/a&gt; love &amp;amp; friendship&lt;/h2&gt;
+&lt;p&gt;在省实最初的时光并不顺利，孤单与落寞更像是常态。自己本来就是一个相对内向的人，由初中带来的些许流言蜚语更是对人际关系的推进起了阻碍作用。值得庆幸的是，在高一的班集体中也有许多愿意与人交流并敞开心扉的同学，诸多方面的进步也让自己慢慢摆脱了刚来时的自卑，便在这之中收获了友谊与更珍贵的感情。&lt;br&gt;
+随后的记忆片段里有许许多多和朋友们共同前行的珍贵回忆，从周末留宿的彻夜长谈与狼人杀，到节日生日的一起庆祝…… 有旧班级朋友们的重聚，也有新结交伙伴的狂欢，因彼此而收获快乐、放下压力，助力前行（好 formal，倒不如说：互相劝说对方摆烂）。与此同时，也和许多朋友共同进步、彼此帮助成长，倒还颇是想念准备港大自招的共同训练（特别鸣谢刚刚早我一天完成面试的 zhx 同学）还有批改作文时被喷的夜晚（&lt;/p&gt;
+&lt;center&gt;
+    &lt;img style=&#34;border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);&#34; 
+    data-src=&#34;https://pic3.zhimg.com/80/v2-c8e76e86c349389751e7678eb5d7141b_720w.png&#34;&gt;
+    &lt;br&gt;
+    &lt;div style=&#34;color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;&#34;&gt;和朋友们一起的大制作！（虽然此时编导在台下鼓掌&lt;/div&gt;
+&lt;/center&gt;
+&lt;p&gt;未来的人生，也衷心祝福各位在各自的道路上继续加油！与君共勉！&lt;/p&gt;
+&lt;h2 id=&#34;老师&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#老师&#34;&gt;#&lt;/a&gt; 老师&lt;/h2&gt;
+&lt;p&gt;印象中来省实前，有很多人跟我说：省实的老师不负责、不关心学生，三年过去，我想，自己的经历就是对这一偏见的最好反驳。&lt;br&gt;
+还记得高一刚入学的时候，语文英语 700 名，总排 200 名，对高中的学习完全没有自信，但是当时我的班主任兼数学老师谢老板却一直对我打气、指导，给予我信心（虽然我还一度觉得烦 /doge）；还有 21 班的陈老师（不敢叫外号 qwq），在一模二模两次雪崩之后依旧对我保持信任与支持（希望不要辜负）&lt;br&gt;
+后面高二搞竞赛，停了好久的课，回来第一次化学考试差点不及格（记忆犹新那时候不假思索地认为&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;N&lt;/mi&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;H&lt;/mi&gt;&lt;msub&gt;&lt;mi&gt;C&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msub&gt;&lt;msub&gt;&lt;mi&gt;O&lt;/mi&gt;&lt;mn&gt;4&lt;/mn&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;NaHC_2O_4&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.83333em;vertical-align:-0.15em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.10903em;&#34;&gt;N&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.08125em;&#34;&gt;H&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.07153em;&#34;&gt;C&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.30110799999999993em;&#34;&gt;&lt;span style=&#34;top:-2.5500000000000003em;margin-left:-0.07153em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.15em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.02778em;&#34;&gt;O&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.30110799999999993em;&#34;&gt;&lt;span style=&#34;top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;4&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.15em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 溶液中&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;H&lt;/mi&gt;&lt;msub&gt;&lt;mi&gt;C&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msub&gt;&lt;msubsup&gt;&lt;mi&gt;O&lt;/mi&gt;&lt;mn&gt;4&lt;/mn&gt;&lt;mo lspace=&#34;0em&#34; rspace=&#34;0em&#34;&gt;−&lt;/mo&gt;&lt;/msubsup&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;HC_2O_4^{-}&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1.0777700000000001em;vertical-align:-0.266308em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.08125em;&#34;&gt;H&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.07153em;&#34;&gt;C&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.30110799999999993em;&#34;&gt;&lt;span style=&#34;top:-2.5500000000000003em;margin-left:-0.07153em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.15em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.02778em;&#34;&gt;O&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.811462em;&#34;&gt;&lt;span style=&#34;top:-2.433692em;margin-left:-0.02778em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;4&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;top:-3.1031310000000003em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;−&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.266308em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 可以忽略，我真棒），和牺牲睡眠时间帮我补课的教学处主任，随后两年里我的化学老师和领跑者导师韩姐&lt;s&gt; wu&lt;/s&gt; 姐&lt;s&gt; po&lt;/s&gt; 有了第一次相&lt;s&gt; xie&lt;/s&gt; 遇&lt;s&gt; hou&lt;/s&gt;，现在每天晚上还能在眼前勾勒出一个在办公室一页页检查我高三每日计划的知心姐姐形象（好羞耻，g 了）(有人要 siri 毕业礼表演的粗糙录像吗 / 咳咳)&lt;br&gt;
+&lt;img data-src=&#34;https://pic2.zhimg.com/80/v2-daddf0f83f6d20cd8379a559ee87e060_720w.jpeg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+ 还有好多好多老师都想感谢啊，最后两周给我改了几十篇作文的老莫，每周坚守岗位上提高班的秘姐姐，原谅一个马马虎虎的科代表的次次犯错的傅老师，还有愿意一行行看我的奇怪解法的舟哥…… 离校那天没来得及写祝福，以后一定会以书面形式一一补上的！&lt;/p&gt;
+&lt;h2 id=&#34;省实&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#省实&#34;&gt;#&lt;/a&gt; 省实&lt;/h2&gt;
+&lt;p&gt;最后要感谢的，当然是三年来的家园。&lt;br&gt;
+“今天我以省实为荣，明天省实以我为荣。” 这是学校主席台上的祝福，我也一定会依此不忘三年来所受的教育，三年来给予我的平台、条件与金色时光，向更远的未来进发，为母校争光。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://i2.hdslb.com/bfs/archive/4ef8c346e50c52892deb633ca7f69e1428cdd16b.jpg&#34; alt=&#34;https://www.bilibili.com/video/BV1N3411V7kV&#34;&gt;&lt;/p&gt;
+&lt;p&gt;也还有一些在省实遇到的人，没有来得及专门感谢，但无论如何，这三年来，遇到的人和事，都是我所怀念、我所爱的时光中的一部分，祝大家未来不忘彼此、前程似锦！&lt;/p&gt;
+&lt;p&gt;Thank you for your reading!&lt;/p&gt;
+&lt;h3 id=&#34;下期预告&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#下期预告&#34;&gt;#&lt;/a&gt; 下期预告&lt;/h3&gt;
+&lt;p&gt;不会太快，最近在忙强基的事，但是总会来的。应该会对三年来自己的成长做一些更深入的思考，希望不咕（逃&lt;/p&gt;
+</content>
+        <updated>2022-06-15T15:03:43.000Z</updated>
     </entry>
 </feed>
