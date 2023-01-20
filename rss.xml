@@ -12,45 +12,45 @@
             <title>Hello, World!</title>
             <link>https://conless.github.io/2023/01/hello-world</link>
             <pubDate>Thu, 19 Jan 2023 22:56:00 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;欢迎来到 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9jb25sZXNzLmxpZmUv&#34;&gt;Conless 的新博客&lt;/span&gt;！本博客使用 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvLw==&#34;&gt;Hexo&lt;/span&gt; 搭建，采用了 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zaG9rYS5sb3N0eXUubWUv&#34;&gt;Shoka&lt;/span&gt; 主题，希望大家喜欢。&lt;/p&gt;
-&lt;h2 id=&#34;搭建过程&#34;&gt;&lt;a href=&#34;#搭建过程&#34; class=&#34;headerlink&#34; title=&#34;搭建过程&#34;&gt;&lt;/a&gt;搭建过程&lt;/h2&gt;&lt;h3 id=&#34;安装并配置-Hexo&#34;&gt;&lt;a href=&#34;#安装并配置-Hexo&#34; class=&#34;headerlink&#34; title=&#34;安装并配置 Hexo&#34;&gt;&lt;/a&gt;安装并配置 Hexo&lt;/h3&gt;&lt;ol&gt;
+            <description><![CDATA[ &lt;p&gt;欢迎来到 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9jb25sZXNzLmxpZmU=&#34;&gt;Conless 的新博客&lt;/span&gt;！本博客使用 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlv&#34;&gt;Hexo&lt;/span&gt; 搭建，采用了 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zaG9rYS5sb3N0eXUubWUv&#34;&gt;Shoka&lt;/span&gt; 主题，希望大家喜欢。&lt;/p&gt;
+&lt;h2 id=&#34;搭建过程&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#搭建过程&#34;&gt;#&lt;/a&gt; 搭建过程&lt;/h2&gt;
+&lt;h3 id=&#34;安装并配置-hexo&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装并配置-hexo&#34;&gt;#&lt;/a&gt; 安装并配置 Hexo&lt;/h3&gt;
+&lt;ol&gt;
 &lt;li&gt;安装 Git, Node&lt;/li&gt;
 &lt;li&gt;安装 hexo-cli&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;npm install -g hexo-cli
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol start=&#34;3&#34;&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;npm&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-g&lt;/span&gt; hexo-cli&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ol start=&#34;3&#34;&gt;
 &lt;li&gt;初始化项目&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;hexo init conless.github.io
-cd conless.github.io
-npm install
-hexo server
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol start=&#34;4&#34;&gt;
-&lt;li&gt;接下来就可以通过访问 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sb2NhbGhvc3Q6NDAwMC8=&#34;&gt;https://localhost:4000&lt;/span&gt; 访问博客了.&lt;/li&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;hexo init conless.github.io&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token builtin class-name&#34;&gt;cd&lt;/span&gt; conless.github.io&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;npm&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;hexo server&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;接下来就可以通过访问 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sb2NhbGhvc3Q6NDAwMA==&#34;&gt;https://localhost:4000&lt;/span&gt; 访问博客了.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;配置-Shoka&#34;&gt;&lt;a href=&#34;#配置-Shoka&#34; class=&#34;headerlink&#34; title=&#34;配置 Shoka&#34;&gt;&lt;/a&gt;配置 Shoka&lt;/h3&gt;&lt;p&gt;首先安装主题与依赖插件&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;git clone https://github.com/amehime/hexo-theme-shoka.git ./themes/shoka
-npm install --save hexo-renderer-multi-markdown-it hexo-autoprefixer hexo-algoliasearch hexo-symbols-count-time hexo-feed
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;再修改站点配置&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;yml&#34;&gt;theme: shoka
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;并新建 _config.shoka.yml&lt;/p&gt;
+&lt;h3 id=&#34;配置-shoka&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#配置-shoka&#34;&gt;#&lt;/a&gt; 配置 Shoka&lt;/h3&gt;
+&lt;p&gt;首先安装主题与依赖插件&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; clone https://github.com/amehime/hexo-theme-shoka.git ./themes/shoka&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;npm&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;--save&lt;/span&gt; hexo-renderer-multi-markdown-it hexo-autoprefixer hexo-algoliasearch hexo-symbols-count-time hexo-feed&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;再修改站点配置&lt;/p&gt;
+&lt;figure class=&#34;highlight yml&#34;&gt;&lt;figcaption data-lang=&#34;YAML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key atrule&#34;&gt;theme&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; shoka&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;并新建 _config.shoka.yml&lt;/p&gt;
 &lt;p&gt;接下来可以进行相关配置，完成后通过&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;hexo g -d
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;传到远端即完成了建站。&lt;/p&gt;
-&lt;h3 id=&#34;GitHub-Pages-与自定义域名&#34;&gt;&lt;a href=&#34;#GitHub-Pages-与自定义域名&#34; class=&#34;headerlink&#34; title=&#34;GitHub Pages 与自定义域名&#34;&gt;&lt;/a&gt;GitHub Pages 与自定义域名&lt;/h3&gt;&lt;pre&gt;&lt;code class=&#34;cpp&#34;&gt;// TODO
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;Blog-更新日志与计划&#34;&gt;&lt;a href=&#34;#Blog-更新日志与计划&#34; class=&#34;headerlink&#34; title=&#34;Blog 更新日志与计划&#34;&gt;&lt;/a&gt;Blog 更新日志与计划&lt;/h2&gt;&lt;h3 id=&#34;TODO&#34;&gt;&lt;a href=&#34;#TODO&#34; class=&#34;headerlink&#34; title=&#34;TODO&#34;&gt;&lt;/a&gt;TODO&lt;/h3&gt;&lt;p&gt;upd on 23&amp;#x2F;01&amp;#x2F;19&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;hexo g &lt;span class=&#34;token parameter variable&#34;&gt;-d&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;传到远端即完成了建站。&lt;/p&gt;
+&lt;h3 id=&#34;github-pages-与自定义域名&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#github-pages-与自定义域名&#34;&gt;#&lt;/a&gt; GitHub Pages 与自定义域名&lt;/h3&gt;
+&lt;figure class=&#34;highlight cpp&#34;&gt;&lt;figcaption data-lang=&#34;C++&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;// TODO&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;blog-更新日志与计划&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#blog-更新日志与计划&#34;&gt;#&lt;/a&gt; Blog 更新日志与计划&lt;/h2&gt;
+&lt;h3 id=&#34;todo&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#todo&#34;&gt;#&lt;/a&gt; TODO&lt;/h3&gt;
+&lt;p&gt;upd on 23/01/19&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;博文和图片的迁移&lt;/li&gt;
 &lt;li&gt;完善前端配置&lt;/li&gt;
 &lt;li&gt;补笔记&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;日志&#34;&gt;&lt;a href=&#34;#日志&#34; class=&#34;headerlink&#34; title=&#34;日志&#34;&gt;&lt;/a&gt;日志&lt;/h3&gt;&lt;p&gt;23&amp;#x2F;01&amp;#x2F;19：将博客迁移到了 GitHub Pages，并通过 Hexo + Shoka 进行配置&lt;br&gt;23&amp;#x2F;12&amp;#x2F;24：停止 wpbox 续费&lt;br&gt;22&amp;#x2F;12&amp;#x2F;10：因为 wpbox 托管更换域名，博客访问中断&lt;br&gt;22&amp;#x2F;09&amp;#x2F;03：将博客内容备份在了微信公众号&lt;br&gt;22&amp;#x2F;06&amp;#x2F;12：更新了 wordpress 主题&lt;br&gt;22&amp;#x2F;01&amp;#x2F;24：将博客迁移到了 wpbox 进行 wordpress 托管&lt;br&gt;21&amp;#x2F;02&amp;#x2F;06：博客停止更新&lt;br&gt;20&amp;#x2F;09&amp;#x2F;04：Luogu 博客开始进行同步更新&lt;br&gt;19&amp;#x2F;08&amp;#x2F;13：将博客迁移到了 cnblogs&lt;br&gt;16&amp;#x2F;12&amp;#x2F;02：在 csdn 建立了第一个博客&lt;/p&gt;
+&lt;h3 id=&#34;日志&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#日志&#34;&gt;#&lt;/a&gt; 日志&lt;/h3&gt;
+&lt;p&gt;23/01/19：将博客迁移到了 GitHub Pages，并通过 Hexo + Shoka 进行配置&lt;br&gt;
+ 23/12/24：停止 wpbox 续费&lt;br&gt;
+ 22/12/10：因为 wpbox 托管更换域名，博客访问中断&lt;br&gt;
+ 22/09/03：将博客内容备份在了微信公众号&lt;br&gt;
+ 22/06/12：更新了 wordpress 主题&lt;br&gt;
+ 22/01/24：将博客迁移到了 wpbox 进行 wordpress 托管&lt;br&gt;
+ 21/02/06：博客停止更新&lt;br&gt;
+ 20/09/04：Luogu 博客开始进行同步更新&lt;br&gt;
+ 19/08/13：将博客迁移到了 cnblogs&lt;br&gt;
+16/12/02：在 csdn 建立了第一个博客&lt;/p&gt;
  ]]></description>
         </item>
         <item>

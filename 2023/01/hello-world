@@ -74,7 +74,7 @@ Conless 的博客 = Hexo</title>
       <i class="ic i-pen"></i>
     </span>
     <span class="text">Symbols count in article</span>
-    <span>916</span>
+    <span>813</span>
     <span class="text">words</span>
   </span>
   <span class="item" title="Reading time">
@@ -115,12 +115,12 @@ Conless 的博客 = Hexo</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_78784805_20200123_003630.jpg"></li>
-          <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_91520323_20220710_232600_1.jpg"></li>
+          <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_76304928_20200214_225307.png"></li>
           <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_77784811_20200214_225300.jpg"></li>
-          <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_87652804_20220205_105506.png"></li>
+          <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_59296258_20181209_131527.png"></li>
           <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_84465983_20210723_161441.png"></li>
-          <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_76760261_20191215_005134.jpg"></li>
+          <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_87652804_20220205_105506.png"></li>
+          <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_78784805_20200123_003630.jpg"></li>
         </ul>
       </div>
     </header>
@@ -164,45 +164,45 @@ Conless 的博客 = Hexo</title>
   <div class="body md" itemprop="articleBody">
     
 
-    <p>欢迎来到 <span class="exturl" data-url="aHR0cHM6Ly9jb25sZXNzLmxpZmUv">Conless 的新博客</span>！本博客使用 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvLw==">Hexo</span> 搭建，采用了 <span class="exturl" data-url="aHR0cHM6Ly9zaG9rYS5sb3N0eXUubWUv">Shoka</span> 主题，希望大家喜欢。</p>
-<h2 id="搭建过程"><a href="#搭建过程" class="headerlink" title="搭建过程"></a>搭建过程</h2><h3 id="安装并配置-Hexo"><a href="#安装并配置-Hexo" class="headerlink" title="安装并配置 Hexo"></a>安装并配置 Hexo</h3><ol>
+    <p>欢迎来到 <span class="exturl" data-url="aHR0cHM6Ly9jb25sZXNzLmxpZmU=">Conless 的新博客</span>！本博客使用 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> 搭建，采用了 <span class="exturl" data-url="aHR0cHM6Ly9zaG9rYS5sb3N0eXUubWUv">Shoka</span> 主题，希望大家喜欢。</p>
+<h2 id="搭建过程"><a class="markdownIt-Anchor" href="#搭建过程">#</a> 搭建过程</h2>
+<h3 id="安装并配置-hexo"><a class="markdownIt-Anchor" href="#安装并配置-hexo">#</a> 安装并配置 Hexo</h3>
+<ol>
 <li>安装 Git, Node</li>
 <li>安装 hexo-cli</li>
 </ol>
-<pre><code class="bash">npm install -g hexo-cli
-</code></pre>
-<ol start="3">
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">npm</span> <span class="token function">install</span> <span class="token parameter variable">-g</span> hexo-cli</pre></td></tr></table></figure><ol start="3">
 <li>初始化项目</li>
 </ol>
-<pre><code class="bash">hexo init conless.github.io
-cd conless.github.io
-npm install
-hexo server
-</code></pre>
-<ol start="4">
-<li>接下来就可以通过访问 <span class="exturl" data-url="aHR0cHM6Ly9sb2NhbGhvc3Q6NDAwMC8=">https://localhost:4000</span> 访问博客了.</li>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre>hexo init conless.github.io</pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token builtin class-name">cd</span> conless.github.io</pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token function">npm</span> <span class="token function">install</span></pre></td></tr><tr><td data-num="4"></td><td><pre>hexo server</pre></td></tr></table></figure><ol start="4">
+<li>接下来就可以通过访问 <span class="exturl" data-url="aHR0cHM6Ly9sb2NhbGhvc3Q6NDAwMA==">https://localhost:4000</span> 访问博客了.</li>
 </ol>
-<h3 id="配置-Shoka"><a href="#配置-Shoka" class="headerlink" title="配置 Shoka"></a>配置 Shoka</h3><p>首先安装主题与依赖插件</p>
-<pre><code class="bash">git clone https://github.com/amehime/hexo-theme-shoka.git ./themes/shoka
-npm install --save hexo-renderer-multi-markdown-it hexo-autoprefixer hexo-algoliasearch hexo-symbols-count-time hexo-feed
-</code></pre>
-<p>再修改站点配置</p>
-<pre><code class="yml">theme: shoka
-</code></pre>
-<p>并新建 _config.shoka.yml</p>
+<h3 id="配置-shoka"><a class="markdownIt-Anchor" href="#配置-shoka">#</a> 配置 Shoka</h3>
+<p>首先安装主题与依赖插件</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">git</span> clone https://github.com/amehime/hexo-theme-shoka.git ./themes/shoka</pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token function">npm</span> <span class="token function">install</span> <span class="token parameter variable">--save</span> hexo-renderer-multi-markdown-it hexo-autoprefixer hexo-algoliasearch hexo-symbols-count-time hexo-feed</pre></td></tr></table></figure><p>再修改站点配置</p>
+<figure class="highlight yml"><figcaption data-lang="YAML"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token key atrule">theme</span><span class="token punctuation">:</span> shoka</pre></td></tr></table></figure><p>并新建 _config.shoka.yml</p>
 <p>接下来可以进行相关配置，完成后通过</p>
-<pre><code class="bash">hexo g -d
-</code></pre>
-<p>传到远端即完成了建站。</p>
-<h3 id="GitHub-Pages-与自定义域名"><a href="#GitHub-Pages-与自定义域名" class="headerlink" title="GitHub Pages 与自定义域名"></a>GitHub Pages 与自定义域名</h3><pre><code class="cpp">// TODO
-</code></pre>
-<h2 id="Blog-更新日志与计划"><a href="#Blog-更新日志与计划" class="headerlink" title="Blog 更新日志与计划"></a>Blog 更新日志与计划</h2><h3 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h3><p>upd on 23&#x2F;01&#x2F;19</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre>hexo g <span class="token parameter variable">-d</span></pre></td></tr></table></figure><p>传到远端即完成了建站。</p>
+<h3 id="github-pages-与自定义域名"><a class="markdownIt-Anchor" href="#github-pages-与自定义域名">#</a> GitHub Pages 与自定义域名</h3>
+<figure class="highlight cpp"><figcaption data-lang="C++"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token comment">// TODO</span></pre></td></tr></table></figure><h2 id="blog-更新日志与计划"><a class="markdownIt-Anchor" href="#blog-更新日志与计划">#</a> Blog 更新日志与计划</h2>
+<h3 id="todo"><a class="markdownIt-Anchor" href="#todo">#</a> TODO</h3>
+<p>upd on 23/01/19</p>
 <ol>
 <li>博文和图片的迁移</li>
 <li>完善前端配置</li>
 <li>补笔记</li>
 </ol>
-<h3 id="日志"><a href="#日志" class="headerlink" title="日志"></a>日志</h3><p>23&#x2F;01&#x2F;19：将博客迁移到了 GitHub Pages，并通过 Hexo + Shoka 进行配置<br>23&#x2F;12&#x2F;24：停止 wpbox 续费<br>22&#x2F;12&#x2F;10：因为 wpbox 托管更换域名，博客访问中断<br>22&#x2F;09&#x2F;03：将博客内容备份在了微信公众号<br>22&#x2F;06&#x2F;12：更新了 wordpress 主题<br>22&#x2F;01&#x2F;24：将博客迁移到了 wpbox 进行 wordpress 托管<br>21&#x2F;02&#x2F;06：博客停止更新<br>20&#x2F;09&#x2F;04：Luogu 博客开始进行同步更新<br>19&#x2F;08&#x2F;13：将博客迁移到了 cnblogs<br>16&#x2F;12&#x2F;02：在 csdn 建立了第一个博客</p>
+<h3 id="日志"><a class="markdownIt-Anchor" href="#日志">#</a> 日志</h3>
+<p>23/01/19：将博客迁移到了 GitHub Pages，并通过 Hexo + Shoka 进行配置<br>
+ 23/12/24：停止 wpbox 续费<br>
+ 22/12/10：因为 wpbox 托管更换域名，博客访问中断<br>
+ 22/09/03：将博客内容备份在了微信公众号<br>
+ 22/06/12：更新了 wordpress 主题<br>
+ 22/01/24：将博客迁移到了 wpbox 进行 wordpress 托管<br>
+ 21/02/06：博客停止更新<br>
+ 20/09/04：Luogu 博客开始进行同步更新<br>
+ 19/08/13：将博客迁移到了 cnblogs<br>
+16/12/02：在 csdn 建立了第一个博客</p>
 
   </div>
 
@@ -277,7 +277,7 @@ npm install --save hexo-renderer-multi-markdown-it hexo-autoprefixer hexo-algoli
     <div class="item left">
       
 
-  <a href="/2022/07/gaokao-summary" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;conless-imagehost.oss-cn-hangzhou.aliyuncs.com&#x2F;images&#x2F;illust_87652804_20220205_105506.png" title="尘埃落定">
+  <a href="/2022/07/gaokao-summary" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;conless-imagehost.oss-cn-hangzhou.aliyuncs.com&#x2F;images&#x2F;illust_82869890_20220205_105432.jpg" title="尘埃落定">
   <span class="type">Previous Post</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>尘埃落定</h3>
@@ -301,7 +301,7 @@ npm install --save hexo-renderer-multi-markdown-it hexo-autoprefixer hexo-algoli
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="Contents">
-          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B"><span class="toc-number">1.</span> <span class="toc-text">搭建过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E5%B9%B6%E9%85%8D%E7%BD%AE-Hexo"><span class="toc-number">1.1.</span> <span class="toc-text">安装并配置 Hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE-Shoka"><span class="toc-number">1.2.</span> <span class="toc-text">配置 Shoka</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#GitHub-Pages-%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D"><span class="toc-number">1.3.</span> <span class="toc-text">GitHub Pages 与自定义域名</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Blog-%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97%E4%B8%8E%E8%AE%A1%E5%88%92"><span class="toc-number">2.</span> <span class="toc-text">Blog 更新日志与计划</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#TODO"><span class="toc-number">2.1.</span> <span class="toc-text">TODO</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A5%E5%BF%97"><span class="toc-number">2.2.</span> <span class="toc-text">日志</span></a></li></ol></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B"><span class="toc-number">1.</span> <span class="toc-text"> 搭建过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E5%B9%B6%E9%85%8D%E7%BD%AE-hexo"><span class="toc-number">1.1.</span> <span class="toc-text"> 安装并配置 Hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE-shoka"><span class="toc-number">1.2.</span> <span class="toc-text"> 配置 Shoka</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#github-pages-%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D"><span class="toc-number">1.3.</span> <span class="toc-text"> GitHub Pages 与自定义域名</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#blog-%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97%E4%B8%8E%E8%AE%A1%E5%88%92"><span class="toc-number">2.</span> <span class="toc-text"> Blog 更新日志与计划</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#todo"><span class="toc-number">2.1.</span> <span class="toc-text"> TODO</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A5%E5%BF%97"><span class="toc-number">2.2.</span> <span class="toc-text"> 日志</span></a></li></ol></li></ol>
       </div>
       <div class="related panel pjax" data-title="Related">
       </div>
@@ -398,15 +398,6 @@ npm install --save hexo-renderer-multi-markdown-it hexo-autoprefixer hexo-algoli
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2022/07/gaokao-summary" title="尘埃落定">尘埃落定</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
     <span><a href="/2023/01/hello-world" title="Hello, World!">Hello, World!</a></span>
   </li>
 
@@ -417,6 +408,15 @@ npm install --save hexo-renderer-multi-markdown-it hexo-autoprefixer hexo-algoli
 </div>
 
     <span><a href="/2022/06/senior-summary" title="高中总结（一）">高中总结（一）</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2022/07/gaokao-summary" title="尘埃落定">尘埃落定</a></span>
   </li>
 
   </ul>
