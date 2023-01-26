@@ -25,12 +25,12 @@
 
   
 
-<link rel="canonical" href="https://conless.github.io/blog/gdkoi-note/">
+<link rel="canonical" href="https://conless.github.io/blog/jotting/gaokao-summary/">
 
 
 
   <title>
-GDKOI2021 游记 |
+尘埃落定 |
 Conless 的博客</title>
 <meta name="generator" content="Hexo 6.3.0"></head>
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -58,23 +58,23 @@ Conless 的博客</title>
         <div id="brand">
           <div class="pjax">
           
-  <h1 itemprop="name headline">GDKOI2021 游记
+  <h1 itemprop="name headline">尘埃落定
   </h1>
   
 <div class="meta">
-  <span class="item" title="Created: 2021-01-20 11:25:43">
+  <span class="item" title="Created: 2022-07-05 23:19:14">
     <span class="icon">
       <i class="ic i-calendar"></i>
     </span>
     <span class="text">Posted on</span>
-    <time itemprop="dateCreated datePublished" datetime="2021-01-20T11:25:43+08:00">2021-01-20</time>
+    <time itemprop="dateCreated datePublished" datetime="2022-07-05T23:19:14+08:00">2022-07-05</time>
   </span>
   <span class="item" title="Symbols count in article">
     <span class="icon">
       <i class="ic i-pen"></i>
     </span>
     <span class="text">Symbols count in article</span>
-    <span>1.8k</span>
+    <span>713</span>
     <span class="text">words</span>
   </span>
   <span class="item" title="Reading time">
@@ -82,7 +82,7 @@ Conless 的博客</title>
       <i class="ic i-clock"></i>
     </span>
     <span class="text">Reading time</span>
-    <span>2 mins.</span>
+    <span>1 mins.</span>
   </span>
 </div>
 
@@ -114,14 +114,7 @@ Conless 的博客</title>
 
       </div>
       <div id="imgs" class="pjax">
-        <ul>
-          <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_76304928_20200214_225307.png"></li>
-          <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_82869890_20220205_105432.jpg"></li>
-          <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_87652804_20220205_105506.png"></li>
-          <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_91520323_20220710_232600_1.jpg"></li>
-          <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_76760261_20191215_005134.jpg"></li>
-          <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_77784811_20200214_225300.jpg"></li>
-        </ul>
+          <img src="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220705232021.jpg">
       </div>
     </header>
     <div id="waves">
@@ -149,7 +142,7 @@ Conless 的博客</title>
 </div>
 
     <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
-  <link itemprop="mainEntityOfPage" href="https://conless.github.io/blog/gdkoi-note/">
+  <link itemprop="mainEntityOfPage" href="https://conless.github.io/blog/jotting/gaokao-summary/">
 
   <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="image" content="/blog/images/avatar.jpg">
@@ -164,67 +157,22 @@ Conless 的博客</title>
   <div class="body md" itemprop="articleBody">
     
 
-    <h2 id="Day-1"><a href="#Day-1" class="headerlink" title="Day -1"></a>Day -1</h2><p>从学农回来了，已经快两个月没碰过信息学了。。</p>
-<p>晚上家长还发了期末考排名。。挂的很厉害，要不是理科保命前20都没了。。</p>
-<p>看了看自己的博客发现noip游记果然咕了，等WC2021退役后再来统一更吧</p>
-<h2 id="Day-0"><a href="#Day-0" class="headerlink" title="Day 0"></a>Day 0</h2><p>划水</p>
-<h2 id="Day-1-21-1-30"><a href="#Day-1-21-1-30" class="headerlink" title="Day 1 (21.1.30)"></a>Day 1 (21.1.30)</h2><p>进场用了半小时看题，感觉 $T1\ T2\ T3$ 可做，$T2$ 很像之前 $gsh$ 出的一题，但没深入想</p>
-<h3 id="T3"><a href="#T3" class="headerlink" title="T3"></a>T3</h3><p>按照开题顺序写吧，想了十分钟感觉可以直接预处理中心回文串+二分答案</p>
-<p>本来想上 $manacher$ 的，感觉自己不是很熟悉…</p>
-<p>码线段树打到一半发现可以直接静态用ST表做，然后花了大概40min写完过了大样例</p>
-<h3 id="T2"><a href="#T2" class="headerlink" title="T2"></a>T2</h3><p>之前没有认真想gsh那道题，导致这题搞了好久都没有搞出啥东西</p>
-<p>最后写了个 $O((R-L)logn)$ 的暴力，期望分40-60</p>
-<h3 id="T1"><a href="#T1" class="headerlink" title="T1"></a>T1</h3><p>是个构造题，先打了送的 $50pts$，最后50分想不到遂写了个很吃数据的寻找增广路</p>
-<h3 id="T4"><a href="#T4" class="headerlink" title="T4"></a>T4</h3><p>没做</p>
-<p>出来后发现大家T3也基本都用马拉车切了，感觉自己的多个log应该也没太大问题</p>
-<p>T1好像随机化比枚举找增广路更优，希望能骗到点分吧…</p>
-<p>T2大家都说是原题，裂开</p>
-<p>T4是一个任意模NTT，好像有些人想到了但是没有码<br>估分50+50+100&#x3D;200</p>
-<p>裂开了…T1T2全挂完了，T1给我搞了个 $Restrict\ Function$，迷惑…</p>
-<p>实际0+10+100</p>
-<p>gsh rk16 wlr也很高</p>
-<p>裂开</p>
-<h2 id="Day-2"><a href="#Day-2" class="headerlink" title="Day 2"></a>Day 2</h2><p>感觉 $T1\ T3$ 好像都不难，$T4$ 依旧没认真看题，先开 $T3$ </p>
-<h3 id="T3-1"><a href="#T3-1" class="headerlink" title="T3"></a>T3</h3><p>还是回文串，还是不准备写 $manacher$（埋下伏笔）</p>
-<p>预处理完就很自然的从前往后推就好了</p>
-<h3 id="T1-1"><a href="#T1-1" class="headerlink" title="T1"></a>T1</h3><p>是一个很烂的线性期望，之前甚至做过很类似的题</p>
-<p>大概15分钟就码完了</p>
-<h3 id="T2-1"><a href="#T2-1" class="headerlink" title="T2"></a>T2</h3><p>送了 $40pts$</p>
-<p>然后苦思冥想了2h…</p>
-<p>感觉应该是用数据结构维护后缀最小值，但是想了想感觉还是优化不了多少</p>
-<p>最后半小时发现确实是直接维护后缀边数就行了，赶紧乱码了个线段树跑过大样例</p>
-<p>预测要挂分，所以把暴力特判加了上去</p>
-<h3 id="T4-1"><a href="#T4-1" class="headerlink" title="T4"></a>T4</h3><p>没做</p>
-<p>T4送了30，心态炸裂</p>
-<p>前三题大家都做得差不多，T2甚至还没多少人做出来，突然赶紧rank不会太低…</p>
-<p>估分100+(60<del>100)+100+0&#x3D;260</del>300</p>
-<p>继续裂开…又挂分了</p>
-<p>T3二分哈希被卡了30pts</p>
-<p>T2果然有很多细节没处理</p>
-<p>实际100+40+70&#x3D;210，rk60，又是noip的排名…</p>
-<p>dby拿了320的准标准分，rk20<br>day1+day2 gsh进队线了</p>
-<h2 id="Day-3"><a href="#Day-3" class="headerlink" title="Day 3"></a>Day 3</h2><p>看完题心态就有点小崩了，感觉除了T2都不可做，说不定今天连100pts都难</p>
-<p>T2想了半小时还是只会暴力，遂先开T1</p>
-<h3 id="T1-2"><a href="#T1-2" class="headerlink" title="T1"></a>T1</h3><p>很容易想到枚举重边再加上可能性，但是误以为只有一个或零个公共点的情况很难处理（实际上是最开始一直把 $\Pi$ 当成 $\Sigma$ 了..）</p>
-<p>以为是这里出了问题，导致小样例都过不去，只能跳了<br>最后才发现是累乘，直接裂开</p>
-<h3 id="T3-2"><a href="#T3-2" class="headerlink" title="T3"></a>T3</h3><p>试图找 $n&#x3D;1$ 的规律，结果画错了。。。</p>
-<p>遂暴力，期望得分15</p>
-<h3 id="T4-2"><a href="#T4-2" class="headerlink" title="T4"></a>T4</h3><p>今天反而觉得T4是最好拿分的，速切了 $subtask 2+3$，1居然没有深入想，出考场发现是个裸的状压，血亏</p>
-<h3 id="T2-2"><a href="#T2-2" class="headerlink" title="T2"></a>T2</h3><p>想了半天数据结构，但是感觉应该搞不了，然后再想了想应该是一个多项式的东西，却不会卷…</p>
-<p>最后用 $unordered_map$ 写了个暴力+去重，期望复杂度 $O(nlogn+nm)$（$m$ 是 $a$ 的前缀和中不同数的个数）</p>
-<p>出考场发现大家估分都不高，$MCAdam$ 切了 $T1$ 大样例但是没处理细节，$T2$ 果然是个卷积，$T3$ n&#x3D;1性质很显然，而我甚至连打表都没想过…</p>
-<p>感觉今天难度远高于去年联合省选，感觉 $NOI2020\ Day1$ 可做的分都更多…</p>
-<p>估分0+60+15+40&#x3D;115</p>
-<p>$T2$ 没过 $n&#x3D;50000$，gsh和czy $n^2$ 过5万…</p>
-<p>$T4$ 挂了，每个捆绑测试点各挂了一两个点…</p>
-<p>今天连T2标准分60都没拿到，直接rk200，裂开了</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>三天加起来挂了差不多200，不过必须说确实是自己实力不济，做题量和速度不够导致没时间对拍其实也是必然的。</p>
-<p>总分375，rk60-80，还是noip水平，不过这几个月确实完全没有做题，所以也确实是真实水平吧</p>
-<p>gsh rk16，在纪中校线限制下rk10，感觉应该稳队了</p>
-<p>初三的xzd rk30，又被吊打了</p>
-<p>必须要说其他人比自己就是努力多很多，所以这样的结果只能坦然接受，确实是技不如人</p>
-<p>其他的话WC以后再说吧，WC于我而言应该纪念意义更强吧，毕竟冲击省队的希望确实不大，就当放松心情的娱乐周咯</p>
-<p>先这样吧。</p>
+    <p><img data-src="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220705232021.jpg" alt=""></p>
+<blockquote>
+<p>不管怎么样，明天又是新的起点。—— 玛格丽特・米切尔《飘》</p>
+</blockquote>
+<p>高考差 2 分，强基差 0.1 分，恐怕，这也就是命运吧。</p>
+<p>昨晚躺在床上，回顾着自己这一个月来，两场最重要的考试里，丢掉的那些分数。“但是这大抵也不是件坏事。” 我对自己说。去一个自己更加喜欢的城市，读一个自己更想学的专业…… 有许多的理由让我为丢掉的这几分而庆幸。</p>
+<p>而最重要的是，<strong>抛下过去那一份受虚荣心左右的自信。</strong></p>
+<p>和身边的人相比怎么样、取得了怎样的荣誉、被别人怎么看待、是否有损自己的形象…… 这样的想法大概贯穿我的整个中学时代，无论是学习还是社交，总在因这些事情而困扰。最终的结果就像一些老师和同学对我的评价那样，“不够纯粹与专注”。</p>
+<p>最近一个月来大概更是如此，总是幻想着清北那个至高无上的 title，期待着名校光环。最极端的时候，甚至梦到过选择提前批进 tp 从而享受赞誉。但这是自己真正想要做的事吗？显然不是。</p>
+<p>所以在昨天最后想清楚，不会服从调剂去其它专业的时候，<strong>有遗憾，但更多的是解脱。</strong></p>
+<p>因为，只有自己真正热爱的事物，才能让自己彻底摆脱光环、荣誉与目光的束缚，获得真正的自信。我很喜欢上海这座城市，很喜欢电子计算机领域，EE AI CS，也相信自己的实力与内驱动力，那即使不在最顶尖的学府，又何妨呢？</p>
+<p>昨天刷到交大 18 级的学长，计算机系综合排名第一的 cxs 的文章，倒是觉得深有启发，写在这里作结与诸君共勉。</p>
+<blockquote>
+<p>可能做 system engineer 的种子在很早以前就埋下了，只是到了大学才开始发芽，在冥冥中指引着我的道路。写代码从我单纯的兴趣，变成了我生活不可或缺的一部分。<br>
+希望几年以后，我依然可以：build things that interest me, excite me, and impact people.</p>
+</blockquote>
 
   </div>
 
@@ -236,9 +184,9 @@ Conless 的博客</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">Edited on</span>
-    <time title="Modified: 2023-01-20 11:27:27" itemprop="dateModified" datetime="2023-01-20T11:27:27+08:00">2023-01-20</time>
+    <time title="Modified: 2023-01-20 10:41:49" itemprop="dateModified" datetime="2023-01-20T10:41:49+08:00">2023-01-20</time>
   </span>
-  <span id="/gdkoi-note/" class="item leancloud_visitors" data-flag-title="GDKOI2021 游记" title="Views">
+  <span id="/jotting/gaokao-summary/" class="item leancloud_visitors" data-flag-title="尘埃落定" title="Views">
       <span class="icon">
         <i class="ic i-eye"></i>
       </span>
@@ -276,11 +224,11 @@ Conless 的博客</title>
 <div id="copyright">
 <ul>
   <li class="author">
-    <strong>Post author:  </strong>Conless Pan <i class="ic i-at"><em>@</em></i>Conless 的博客
+    <strong>Post author:  </strong>Conless <i class="ic i-at"><em>@</em></i>Conless 的博客
   </li>
   <li class="link">
     <strong>Post link: </strong>
-    <a href="https://conless.github.io/blog/gdkoi-note/" title="GDKOI2021 游记">https://conless.github.io/blog/gdkoi-note/</a>
+    <a href="https://conless.github.io/blog/jotting/gaokao-summary/" title="尘埃落定">https://conless.github.io/blog/jotting/gaokao-summary/</a>
   </li>
   <li class="license">
     <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
@@ -297,14 +245,22 @@ Conless 的博客</title>
 
 <div class="post-nav">
     <div class="item left">
+      
+
+  <a href="/blog/jotting/senior-summary/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;pic1.zhimg.com&#x2F;80&#x2F;v2-60d1a49e9f70c3a31e9ab191cd523926_720w.jpeg" title="高中总结（一）">
+  <span class="type">Previous Post</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>高中总结（一）</h3>
+  </a>
+
     </div>
     <div class="item right">
       
 
-  <a href="/blog/senior-summary/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;pic1.zhimg.com&#x2F;80&#x2F;v2-60d1a49e9f70c3a31e9ab191cd523926_720w.jpeg" title="高中总结（一）">
+  <a href="/blog/travel/jiuzhai-travel-note/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;conless-imagehost.oss-cn-hangzhou.aliyuncs.com&#x2F;images&#x2F;illust_59296258_20181209_131527.png" title="九寨沟游记 (images to be fixed)">
   <span class="type">Next Post</span>
   <span class="category"><i class="ic i-flag"></i> </span>
-  <h3>高中总结（一）</h3>
+  <h3>九寨沟游记 (images to be fixed)</h3>
   </a>
 
     </div>
@@ -323,7 +279,6 @@ Conless 的博客</title>
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="Contents">
-          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Day-1"><span class="toc-number">1.</span> <span class="toc-text">Day -1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Day-0"><span class="toc-number">2.</span> <span class="toc-text">Day 0</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Day-1-21-1-30"><span class="toc-number">3.</span> <span class="toc-text">Day 1 (21.1.30)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#T3"><span class="toc-number">3.1.</span> <span class="toc-text">T3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#T2"><span class="toc-number">3.2.</span> <span class="toc-text">T2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#T1"><span class="toc-number">3.3.</span> <span class="toc-text">T1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#T4"><span class="toc-number">3.4.</span> <span class="toc-text">T4</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Day-2"><span class="toc-number">4.</span> <span class="toc-text">Day 2</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#T3-1"><span class="toc-number">4.1.</span> <span class="toc-text">T3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#T1-1"><span class="toc-number">4.2.</span> <span class="toc-text">T1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#T2-1"><span class="toc-number">4.3.</span> <span class="toc-text">T2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#T4-1"><span class="toc-number">4.4.</span> <span class="toc-text">T4</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Day-3"><span class="toc-number">5.</span> <span class="toc-text">Day 3</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#T1-2"><span class="toc-number">5.1.</span> <span class="toc-text">T1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#T3-2"><span class="toc-number">5.2.</span> <span class="toc-text">T3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#T4-2"><span class="toc-number">5.3.</span> <span class="toc-text">T4</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#T2-2"><span class="toc-number">5.4.</span> <span class="toc-text">T2</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">6.</span> <span class="toc-text">总结</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="Related">
       </div>
@@ -393,10 +348,12 @@ Conless 的博客</title>
 
   <ul id="quick">
     <li class="prev pjax">
+        <a href="/blog/jotting/senior-summary/" rel="prev" title="Previous Post"><i class="ic i-chevron-left"></i></a>
     </li>
     <li class="up"><i class="ic i-arrow-up"></i></li>
     <li class="down"><i class="ic i-arrow-down"></i></li>
     <li class="next pjax">
+        <a href="/blog/travel/jiuzhai-travel-note/" rel="next" title="Next Post"><i class="ic i-chevron-right"></i></a>
     </li>
     <li class="percent"></li>
   </ul>
@@ -420,7 +377,7 @@ Conless 的博客</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/blog/shupou/" title="数据结构复健（一）：树链剖分 (updating)">数据结构复健（一）：树链剖分 (updating)</a></span>
+    <span><a href="/blog/travel/fangsuo-travel-note/" title="重逢方所 (images to be fixed)">重逢方所 (images to be fixed)</a></span>
   </li>
 
       
@@ -429,7 +386,7 @@ Conless 的博客</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/blog/fangsuo-travel-note/" title="重逢方所 (images to be fixed)">重逢方所 (images to be fixed)</a></span>
+    <span><a href="/blog/cs/hello-world/" title="Hello, World!">Hello, World!</a></span>
   </li>
 
       
@@ -438,7 +395,7 @@ Conless 的博客</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/blog/jiuzhai-travel-note/" title="九寨沟游记 (images to be fixed)">九寨沟游记 (images to be fixed)</a></span>
+    <span><a href="/blog/cs/shupou/" title="数据结构复健（一）：树链剖分 (updating)">数据结构复健（一）：树链剖分 (updating)</a></span>
   </li>
 
       
@@ -447,7 +404,7 @@ Conless 的博客</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/blog/hello-world/" title="Hello, World!">Hello, World!</a></span>
+    <span><a href="/blog/travel/jiuzhai-travel-note/" title="九寨沟游记 (images to be fixed)">九寨沟游记 (images to be fixed)</a></span>
   </li>
 
       
@@ -456,7 +413,7 @@ Conless 的博客</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/blog/senior-summary/" title="高中总结（一）">高中总结（一）</a></span>
+    <span><a href="/blog/cs/gdkoi-note/" title="GDKOI2021 游记">GDKOI2021 游记</a></span>
   </li>
 
       
@@ -465,7 +422,7 @@ Conless 的博客</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/blog/gdkoi-note/" title="GDKOI2021 游记">GDKOI2021 游记</a></span>
+    <span><a href="/blog/jotting/senior-summary/" title="高中总结（一）">高中总结（一）</a></span>
   </li>
 
       
@@ -474,7 +431,7 @@ Conless 的博客</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/blog/gaokao-summary/" title="尘埃落定">尘埃落定</a></span>
+    <span><a href="/blog/jotting/gaokao-summary/" title="尘埃落定">尘埃落定</a></span>
   </li>
 
   </ul>
@@ -517,7 +474,7 @@ Conless 的博客</title>
   </div>
 <script data-config type="text/javascript">
   var LOCAL = {
-    path: '/gdkoi-note/',
+    path: '/jotting/gaokao-summary/',
     favicon: {
       show: "（●´3｀●）Goooood",
       hide: "(´Д｀)Booooom"
