@@ -25,12 +25,12 @@
 
   
 
-<link rel="canonical" href="https://conless.github.io/blog/[object%20Object]/gaokao-summaryundefined">
+<link rel="canonical" href="https://conless.github.io/blog/shupou/">
 
 
 
   <title>
-尘埃落定 |
+数据结构复健（一）：树链剖分 (updating) |
 Conless 的博客</title>
 <meta name="generator" content="Hexo 6.3.0"></head>
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -58,23 +58,23 @@ Conless 的博客</title>
         <div id="brand">
           <div class="pjax">
           
-  <h1 itemprop="name headline">尘埃落定
+  <h1 itemprop="name headline">数据结构复健（一）：树链剖分 (updating)
   </h1>
   
 <div class="meta">
-  <span class="item" title="Created: 2022-07-05 23:19:14">
+  <span class="item" title="Created: 2023-01-27 14:03:43">
     <span class="icon">
       <i class="ic i-calendar"></i>
     </span>
     <span class="text">Posted on</span>
-    <time itemprop="dateCreated datePublished" datetime="2022-07-05T23:19:14+08:00">2022-07-05</time>
+    <time itemprop="dateCreated datePublished" datetime="2023-01-27T14:03:43+08:00">2023-01-27</time>
   </span>
   <span class="item" title="Symbols count in article">
     <span class="icon">
       <i class="ic i-pen"></i>
     </span>
     <span class="text">Symbols count in article</span>
-    <span>713</span>
+    <span>1k</span>
     <span class="text">words</span>
   </span>
   <span class="item" title="Reading time">
@@ -114,7 +114,14 @@ Conless 的博客</title>
 
       </div>
       <div id="imgs" class="pjax">
-          <img src="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220705232021.jpg">
+        <ul>
+          <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_78784805_20200123_003630.jpg"></li>
+          <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_84465983_20210723_161441.png"></li>
+          <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_82869890_20220205_105432.jpg"></li>
+          <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_87652804_20220205_105506.png"></li>
+          <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_91520323_20220710_232600_1.jpg"></li>
+          <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_59296258_20181209_131527.png"></li>
+        </ul>
       </div>
     </header>
     <div id="waves">
@@ -142,7 +149,7 @@ Conless 的博客</title>
 </div>
 
     <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
-  <link itemprop="mainEntityOfPage" href="https://conless.github.io/blog/[object%20Object]/gaokao-summaryundefined">
+  <link itemprop="mainEntityOfPage" href="https://conless.github.io/blog/shupou/">
 
   <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="image" content="/blog/images/avatar.jpg">
@@ -157,22 +164,77 @@ Conless 的博客</title>
   <div class="body md" itemprop="articleBody">
     
 
-    <p><img data-src="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220705232021.jpg" alt=""></p>
-<blockquote>
-<p>不管怎么样，明天又是新的起点。—— 玛格丽特・米切尔《飘》</p>
-</blockquote>
-<p>高考差 2 分，强基差 0.1 分，恐怕，这也就是命运吧。</p>
-<p>昨晚躺在床上，回顾着自己这一个月来，两场最重要的考试里，丢掉的那些分数。“但是这大抵也不是件坏事。” 我对自己说。去一个自己更加喜欢的城市，读一个自己更想学的专业…… 有许多的理由让我为丢掉的这几分而庆幸。</p>
-<p>而最重要的是，<strong>抛下过去那一份受虚荣心左右的自信。</strong></p>
-<p>和身边的人相比怎么样、取得了怎样的荣誉、被别人怎么看待、是否有损自己的形象…… 这样的想法大概贯穿我的整个中学时代，无论是学习还是社交，总在因这些事情而困扰。最终的结果就像一些老师和同学对我的评价那样，“不够纯粹与专注”。</p>
-<p>最近一个月来大概更是如此，总是幻想着清北那个至高无上的 title，期待着名校光环。最极端的时候，甚至梦到过选择提前批进 tp 从而享受赞誉。但这是自己真正想要做的事吗？显然不是。</p>
-<p>所以在昨天最后想清楚，不会服从调剂去其它专业的时候，<strong>有遗憾，但更多的是解脱。</strong></p>
-<p>因为，只有自己真正热爱的事物，才能让自己彻底摆脱光环、荣誉与目光的束缚，获得真正的自信。我很喜欢上海这座城市，很喜欢电子计算机领域，EE AI CS，也相信自己的实力与内驱动力，那即使不在最顶尖的学府，又何妨呢？</p>
-<p>昨天刷到交大 18 级的学长，计算机系综合排名第一的 cxs 的文章，倒是觉得深有启发，写在这里作结与诸君共勉。</p>
-<blockquote>
-<p>可能做 system engineer 的种子在很早以前就埋下了，只是到了大学才开始发芽，在冥冥中指引着我的道路。写代码从我单纯的兴趣，变成了我生活不可或缺的一部分。<br>
-希望几年以后，我依然可以：build things that interest me, excite me, and impact people.</p>
-</blockquote>
+    <h2 id="学习计划"><a href="#学习计划" class="headerlink" title="学习计划"></a>学习计划</h2><table>
+<thead>
+<tr>
+<th align="center">事项</th>
+<th align="center">详情</th>
+<th align="center">时间</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">重温基本概念</td>
+<td align="center">参考课本与 OI-wiki</td>
+<td align="center">1h</td>
+</tr>
+<tr>
+<td align="center">基础题目练习</td>
+<td align="center">复习 P2590,P2146,P3178，完成 P4427,ACMOJ1473</td>
+<td align="center">2.5h</td>
+</tr>
+<tr>
+<td align="center">概念细节与拓展</td>
+<td align="center">课本，OI-wiki，完成或学习 P1505 &#x2F; P3979</td>
+<td align="center">2.5h</td>
+</tr>
+</tbody></table>
+<h2 id="思想"><a href="#思想" class="headerlink" title="思想"></a>思想</h2><p>将一棵树划分为若干条链，转化为线性结构，从而用其它数据结构维护相关信息。</p>
+<p>重链剖分可以将树上的任意一条路径划分成不超过 $O(\log n)$ 条连续的链，每条链上的点深度互不相同（即是自底向上的一条链，链上所有点的 LCA 为链的一个端点）。</p>
+<p>重链剖分还能保证划分出的每条链上的节点 DFS 序连续，因此可以方便地用一些维护序列的数据结构（如线段树）来维护树上路径的信息。</p>
+<h2 id="重链剖分"><a href="#重链剖分" class="headerlink" title="重链剖分"></a>重链剖分</h2><p>重链剖分是最常用的树链剖分方式：</p>
+<p>定义 重子节点 表示其子节点中子树最大的子结点。如果有多个子树最大的子结点，取其一。如果没有子节点，就无重子节点。</p>
+<p>定义 轻子节点 表示剩余的所有子结点。</p>
+<p>从这个结点到重子节点的边为 重边。</p>
+<p>到其他轻子节点的边为 轻边。</p>
+<p>若干条首尾衔接的重边构成 重链。</p>
+<p>把落单的结点也当作重链，那么整棵树就被剖分成若干条重链。</p>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p>运用到的数据结构为支持 单点&#x2F;区间 修改&#x2F;查询 的线段树，记作</p>
+<pre><code class="cpp">sjtu::SegmentTree&lt;int, MAXN&gt; stree;
+</code></pre>
+<p>首先进行两遍 dfs 建树</p>
+<pre><code class="cpp">void dfs(int u, int last) &#123;
+    int maxsiz = 0;
+    siz[u] = 1;
+    fa[u] = last;
+    for (int i = head[u]; i; i = edge[i].next) &#123;
+        int v = edge[i].v;
+        if (v == last)
+            continue;
+        h[v] = h[u] + 1;
+        dfs(v, u);
+        siz[u] += siz[v];
+        if (siz[v] &gt; maxsiz) &#123;
+            maxsiz = siz[v];
+            mson[u] = v;
+        &#125;
+    &#125;
+&#125;
+
+void build(int u, int last, int top) &#123;
+    key[u] = ++ti;
+    tp[u] = top;
+    data[ti] = w[u];
+    if (mson[u])
+        build(mson[u], u, top);
+    for (int i = head[u]; i; i = edge[i].next) &#123;
+        int v = edge[i].v;
+        if (v == last || v == mson[u])
+            continue;
+        build(v, u, v);
+    &#125;
+    las[u] = ti;
+&#125;
+</code></pre>
 
   </div>
 
@@ -184,9 +246,9 @@ Conless 的博客</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">Edited on</span>
-    <time title="Modified: 2023-01-20 10:41:49" itemprop="dateModified" datetime="2023-01-20T10:41:49+08:00">2023-01-20</time>
+    <time title="Modified: 2023-01-26 17:48:47" itemprop="dateModified" datetime="2023-01-26T17:48:47+08:00">2023-01-26</time>
   </span>
-  <span id="/[object Object]/gaokao-summaryundefined" class="item leancloud_visitors" data-flag-title="尘埃落定" title="Views">
+  <span id="/shupou/" class="item leancloud_visitors" data-flag-title="数据结构复健（一）：树链剖分 (updating)" title="Views">
       <span class="icon">
         <i class="ic i-eye"></i>
       </span>
@@ -228,7 +290,7 @@ Conless 的博客</title>
   </li>
   <li class="link">
     <strong>Post link: </strong>
-    <a href="https://conless.github.io/blog/[object%20Object]/gaokao-summaryundefined" title="尘埃落定">https://conless.github.io/blog/[object Object]/gaokao-summaryundefined</a>
+    <a href="https://conless.github.io/blog/shupou/" title="数据结构复健（一）：树链剖分 (updating)">https://conless.github.io/blog/shupou/</a>
   </li>
   <li class="license">
     <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
@@ -247,22 +309,14 @@ Conless 的博客</title>
     <div class="item left">
       
 
-  <a href="/blog/%5Bobject%20Object%5D/senior-summaryundefined" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;pic1.zhimg.com&#x2F;80&#x2F;v2-60d1a49e9f70c3a31e9ab191cd523926_720w.jpeg" title="高中总结（一）">
+  <a href="/blog/hello-world/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;conless-imagehost.oss-cn-hangzhou.aliyuncs.com&#x2F;images&#x2F;illust_87652804_20220205_105506.png" title="Hello, World!">
   <span class="type">Previous Post</span>
   <span class="category"><i class="ic i-flag"></i> </span>
-  <h3>高中总结（一）</h3>
+  <h3>Hello, World!</h3>
   </a>
 
     </div>
     <div class="item right">
-      
-
-  <a href="/blog/%5Bobject%20Object%5D/jiuzhai-travel-noteundefined" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;conless-imagehost.oss-cn-hangzhou.aliyuncs.com&#x2F;images&#x2F;illust_84465983_20210723_161441.png" title="九寨沟游记 (images to be fixed)">
-  <span class="type">Next Post</span>
-  <span class="category"><i class="ic i-flag"></i> </span>
-  <h3>九寨沟游记 (images to be fixed)</h3>
-  </a>
-
     </div>
 </div>
 
@@ -279,6 +333,7 @@ Conless 的博客</title>
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="Contents">
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92"><span class="toc-number">1.</span> <span class="toc-text">学习计划</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%9D%E6%83%B3"><span class="toc-number">2.</span> <span class="toc-text">思想</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%8D%E9%93%BE%E5%89%96%E5%88%86"><span class="toc-number">3.</span> <span class="toc-text">重链剖分</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0"><span class="toc-number">4.</span> <span class="toc-text">实现</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="Related">
       </div>
@@ -348,12 +403,10 @@ Conless 的博客</title>
 
   <ul id="quick">
     <li class="prev pjax">
-        <a href="/blog/%5Bobject%20Object%5D/senior-summaryundefined" rel="prev" title="Previous Post"><i class="ic i-chevron-left"></i></a>
     </li>
     <li class="up"><i class="ic i-arrow-up"></i></li>
     <li class="down"><i class="ic i-arrow-down"></i></li>
     <li class="next pjax">
-        <a href="/blog/%5Bobject%20Object%5D/jiuzhai-travel-noteundefined" rel="next" title="Next Post"><i class="ic i-chevron-right"></i></a>
     </li>
     <li class="percent"></li>
   </ul>
@@ -377,7 +430,7 @@ Conless 的博客</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/blog/%5Bobject%20Object%5D/jiuzhai-travel-noteundefined" title="九寨沟游记 (images to be fixed)">九寨沟游记 (images to be fixed)</a></span>
+    <span><a href="/blog/shupou/" title="数据结构复健（一）：树链剖分 (updating)">数据结构复健（一）：树链剖分 (updating)</a></span>
   </li>
 
       
@@ -386,7 +439,7 @@ Conless 的博客</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/blog/%5Bobject%20Object%5D/senior-summaryundefined" title="高中总结（一）">高中总结（一）</a></span>
+    <span><a href="/blog/gaokao-summary/" title="尘埃落定">尘埃落定</a></span>
   </li>
 
       
@@ -395,7 +448,7 @@ Conless 的博客</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/blog/%5Bobject%20Object%5D/hello-worldundefined" title="Hello, World!">Hello, World!</a></span>
+    <span><a href="/blog/jiuzhai-travel-note/" title="九寨沟游记 (images to be fixed)">九寨沟游记 (images to be fixed)</a></span>
   </li>
 
       
@@ -404,7 +457,7 @@ Conless 的博客</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/blog/%5Bobject%20Object%5D/gaokao-summaryundefined" title="尘埃落定">尘埃落定</a></span>
+    <span><a href="/blog/hello-world/" title="Hello, World!">Hello, World!</a></span>
   </li>
 
       
@@ -413,7 +466,7 @@ Conless 的博客</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/blog/%5Bobject%20Object%5D/gdkoi-noteundefined" title="GDKOI2021 游记">GDKOI2021 游记</a></span>
+    <span><a href="/blog/fangsuo-travel-note/" title="重逢方所 (images to be fixed)">重逢方所 (images to be fixed)</a></span>
   </li>
 
       
@@ -422,7 +475,7 @@ Conless 的博客</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/blog/%5Bobject%20Object%5D/fangsuo-travel-noteundefined" title="重逢方所 (images to be fixed)">重逢方所 (images to be fixed)</a></span>
+    <span><a href="/blog/senior-summary/" title="高中总结（一）">高中总结（一）</a></span>
   </li>
 
       
@@ -431,7 +484,7 @@ Conless 的博客</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/blog/%5Bobject%20Object%5D/shupouundefined" title="数据结构复健（一）：树链剖分 (updating)">数据结构复健（一）：树链剖分 (updating)</a></span>
+    <span><a href="/blog/gdkoi-note/" title="GDKOI2021 游记">GDKOI2021 游记</a></span>
   </li>
 
   </ul>
@@ -474,7 +527,7 @@ Conless 的博客</title>
   </div>
 <script data-config type="text/javascript">
   var LOCAL = {
-    path: '/[object Object]/gaokao-summaryundefined',
+    path: '/shupou/',
     favicon: {
       show: "（●´3｀●）Goooood",
       hide: "(´Д｀)Booooom"
