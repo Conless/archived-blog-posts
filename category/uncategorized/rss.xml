@@ -3,7 +3,7 @@
     <channel>
         <title>Conless&#39; Blog • Posts by &#34;uncategorized&#34; category</title>
         <link>https://conless.dev/blog</link>
-        <description></description>
+        <description>Stay hungry. Stay foolish.</description>
         <language>en</language>
         <pubDate>Thu, 19 Jan 2023 23:14:00 +0800</pubDate>
         <lastBuildDate>Thu, 19 Jan 2023 23:14:00 +0800</lastBuildDate>
@@ -12,23 +12,39 @@
             <title>博客功能更新日志 (updating)</title>
             <link>https://conless.dev/blog/default/update-log/</link>
             <pubDate>Thu, 19 Jan 2023 23:14:00 +0800</pubDate>
-            <description><![CDATA[ &lt;h3 id=&#34;更新计划&#34;&gt;&lt;a href=&#34;#更新计划&#34; class=&#34;headerlink&#34; title=&#34;更新计划&#34;&gt;&lt;/a&gt;更新计划&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;Jan 2023&lt;ol&gt;
+            <description><![CDATA[ &lt;h3 id=&#34;更新计划&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#更新计划&#34;&gt;#&lt;/a&gt; 更新计划&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Jan 2023
+&lt;ol&gt;
 &lt;li&gt;完成博文分类：四个大类 + 若干小类&lt;/li&gt;
+&lt;li&gt;添加友链&lt;/li&gt;
 &lt;li&gt;添加博客背景音乐&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/li&gt;
-&lt;li&gt;Feb 2023&lt;ol&gt;
+&lt;li&gt;Feb 2023
+&lt;ol&gt;
 &lt;li&gt;完成博客的评论与搜索功能&lt;/li&gt;
 &lt;li&gt;在 Gitee Pages 上完成博客备份&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/li&gt;
-&lt;li&gt;Q2 2023&lt;ol&gt;
+&lt;li&gt;Q2 2023
+&lt;ol&gt;
 &lt;li&gt;迁移此前博文与图片&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;日志&#34;&gt;&lt;a href=&#34;#日志&#34; class=&#34;headerlink&#34; title=&#34;日志&#34;&gt;&lt;/a&gt;日志&lt;/h3&gt;&lt;p&gt;23&amp;#x2F;01&amp;#x2F;28：初步实现了博文分类&lt;br&gt;23&amp;#x2F;01&amp;#x2F;19：将博客迁移到了 GitHub Pages，并通过 Hexo + Shoka 进行配置&lt;br&gt;23&amp;#x2F;12&amp;#x2F;24：停止 wpbox 续费&lt;br&gt;22&amp;#x2F;12&amp;#x2F;10：因为 wpbox 托管更换域名，博客访问中断&lt;br&gt;22&amp;#x2F;09&amp;#x2F;03：将博客内容备份在了微信公众号&lt;br&gt;22&amp;#x2F;06&amp;#x2F;12：更新了 wordpress 主题&lt;br&gt;22&amp;#x2F;01&amp;#x2F;24：将博客迁移到了 wpbox 进行 wordpress 托管&lt;br&gt;21&amp;#x2F;02&amp;#x2F;06：博客停止更新&lt;br&gt;20&amp;#x2F;09&amp;#x2F;04：Luogu 博客开始进行同步更新&lt;br&gt;19&amp;#x2F;08&amp;#x2F;13：将博客迁移到了 cnblogs&lt;br&gt;16&amp;#x2F;12&amp;#x2F;02：在 csdn 建立了第一个博客&lt;/p&gt;
+&lt;h3 id=&#34;日志&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#日志&#34;&gt;#&lt;/a&gt; 日志&lt;/h3&gt;
+&lt;p&gt;23/01/28：初步实现了博文分类&lt;br&gt;
+ 23/01/19：将博客迁移到了 GitHub Pages，并通过 Hexo + Shoka 进行配置&lt;br&gt;
+ 23/12/24：停止 wpbox 续费&lt;br&gt;
+ 22/12/10：因为 wpbox 托管更换域名，博客访问中断&lt;br&gt;
+ 22/09/03：将博客内容备份在了微信公众号&lt;br&gt;
+ 22/06/12：更新了 wordpress 主题&lt;br&gt;
+ 22/01/24：将博客迁移到了 wpbox 进行 wordpress 托管&lt;br&gt;
+ 21/02/06：博客停止更新&lt;br&gt;
+ 20/09/04：Luogu 博客开始进行同步更新&lt;br&gt;
+ 19/08/13：将博客迁移到了 cnblogs&lt;br&gt;
+16/12/02：在 csdn 建立了第一个博客&lt;/p&gt;
  ]]></description>
         </item>
     </channel>
