@@ -3,7 +3,117 @@
     <id>https://conless.dev/blog</id>
     <title>夢の日記 • Posts by &#34;computer science&#34; category</title>
     <link href="https://conless.dev/blog" />
-    <updated>2023-01-19T14:56:00.000Z</updated>
+    <updated>2023-02-19T14:06:00.000Z</updated>
+    <entry>
+        <id>https://conless.dev/blog/cs/data-structure/string/</id>
+        <title>数据结构（一）：字符串算法</title>
+        <link rel="alternate" href="https://conless.dev/blog/cs/data-structure/string/"/>
+        <content type="html">&lt;h1 id=&#34;前缀函数与-KMP-算法&#34;&gt;&lt;a href=&#34;#前缀函数与-KMP-算法&#34; class=&#34;headerlink&#34; title=&#34;前缀函数与 KMP 算法&#34;&gt;&lt;/a&gt;前缀函数与 KMP 算法&lt;/h1&gt;&lt;h2 id=&#34;前缀函数&#34;&gt;&lt;a href=&#34;#前缀函数&#34; class=&#34;headerlink&#34; title=&#34;前缀函数&#34;&gt;&lt;/a&gt;前缀函数&lt;/h2&gt;&lt;h3 id=&#34;定义&#34;&gt;&lt;a href=&#34;#定义&#34; class=&#34;headerlink&#34; title=&#34;定义&#34;&gt;&lt;/a&gt;定义&lt;/h3&gt;&lt;p&gt;对于一个长度为 $n$ 的字符串 $s$，其最大相等前后缀长度为 $k$ 当&lt;br&gt;$$s[0\cdots k-1]&amp;#x3D;s[n-k+1\cdots n]$$&lt;br&gt;且 $k$ 是满足这一条件的最大值。对于整个字符串，其前缀函数就是一个长度为 $n$ 的数组 $\pi[n]$，其中 $\pi[i]$ 的值为 $s[0\cdots i]$ 的最大相等前后缀长度。特别地，规定 $\pi[0]&amp;#x3D;0$&lt;/p&gt;
+&lt;p&gt;例如，字符串&lt;br&gt;$$abcdabcde$$&lt;br&gt;就有&lt;br&gt;$$\pi&amp;#x3D;{0,0,0,0,1,2,3,4,0}$$&lt;/p&gt;
+&lt;h3 id=&#34;前缀函数的计算&#34;&gt;&lt;a href=&#34;#前缀函数的计算&#34; class=&#34;headerlink&#34; title=&#34;前缀函数的计算&#34;&gt;&lt;/a&gt;前缀函数的计算&lt;/h3&gt;&lt;h4 id=&#34;朴素算法&#34;&gt;&lt;a href=&#34;#朴素算法&#34; class=&#34;headerlink&#34; title=&#34;朴素算法&#34;&gt;&lt;/a&gt;朴素算法&lt;/h4&gt;&lt;p&gt;trivial $O(n^3)$&lt;/p&gt;
+&lt;h4 id=&#34;匹配优化&#34;&gt;&lt;a href=&#34;#匹配优化&#34; class=&#34;headerlink&#34; title=&#34;匹配优化&#34;&gt;&lt;/a&gt;匹配优化&lt;/h4&gt;&lt;p&gt;注意到相邻两项有 $\Delta\pi\le 1$，这是因为&lt;br&gt;于是可以在朴素算法的前提下进行优化，将 $\pi[n]$ 的枚举上界设为 $\pi[n-1]+1$，这样一来，容易证明时间复杂度为 $O(n^2)$。&lt;/p&gt;
+&lt;h4 id=&#34;失配优化&#34;&gt;&lt;a href=&#34;#失配优化&#34; class=&#34;headerlink&#34; title=&#34;失配优化&#34;&gt;&lt;/a&gt;失配优化&lt;/h4&gt;&lt;p&gt;在上一个优化中，我们处理了 $\pi_{n+1}$ 的最优情况，即完成匹配，下面讨论无法完成匹配的情况，容易发现，下一个应该尝试的长度最大为 $\pi_{\pi_n - 1}$，这是因为其为满足 $s[0\cdots i-1]&amp;#x3D;s[n-i+1\cdots n]$ 的次大 $i$。&lt;/p&gt;
+&lt;p&gt;这样一来，我们就可以得到一个 $O(n)$ 的算法了。&lt;/p&gt;
+&lt;h4 id=&#34;实现&#34;&gt;&lt;a href=&#34;#实现&#34; class=&#34;headerlink&#34; title=&#34;实现&#34;&gt;&lt;/a&gt;实现&lt;/h4&gt;&lt;pre&gt;&lt;code class=&#34;cpp&#34;&gt;void prefix_funtion(std::string s) &amp;#123;
+    int n = s.size();
+    vector&amp;lt;int&amp;gt; pi(n);
+    for (int i = 1; i &amp;lt; n; i++) &amp;#123;
+        int j = pi[j - 1];
+        while (j &amp;amp;&amp;amp; s[j] != s[i])
+            j = pi[j - 1];
+        if (s[i] == s[j])
+            j++;
+        pi[i] = j;
+    &amp;#125;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;应用&#34;&gt;&lt;a href=&#34;#应用&#34; class=&#34;headerlink&#34; title=&#34;应用&#34;&gt;&lt;/a&gt;应用&lt;/h2&gt;&lt;h3 id=&#34;KMP-算法&#34;&gt;&lt;a href=&#34;#KMP-算法&#34; class=&#34;headerlink&#34; title=&#34;KMP 算法&#34;&gt;&lt;/a&gt;KMP 算法&lt;/h3&gt;&lt;h4 id=&#34;过程&#34;&gt;&lt;a href=&#34;#过程&#34; class=&#34;headerlink&#34; title=&#34;过程&#34;&gt;&lt;/a&gt;过程&lt;/h4&gt;&lt;p&gt;给定一个文本串 $t$ 与模式串 $s$，尝试找到 $s$ 在 $t$ 中的所有出现。&lt;/p&gt;
+&lt;h4 id=&#34;算法&#34;&gt;&lt;a href=&#34;#算法&#34; class=&#34;headerlink&#34; title=&#34;算法&#34;&gt;&lt;/a&gt;算法&lt;/h4&gt;&lt;p&gt;考虑问题的本质：是否在 $t$ 中存在一段 $t[i\cdots i+n-1]$ 使得其与 $s$ 完全相等，显然，这可以转化为一个求前缀函数的问题，构造字符串&lt;br&gt;$$s+#+t$$&lt;br&gt;其中 $#$ 代表一个无义分隔符。接下来，考虑在 $n+1$ 之后的区域考虑前缀函数，显然，找到匹配当且仅当 $\pi_i&amp;#x3D;n$。&lt;/p&gt;
+&lt;h3 id=&#34;求字符串的周期&#34;&gt;&lt;a href=&#34;#求字符串的周期&#34; class=&#34;headerlink&#34; title=&#34;求字符串的周期&#34;&gt;&lt;/a&gt;求字符串的周期&lt;/h3&gt;&lt;p&gt;若字符串内存在一个 $l$ 的周期，则显然其有一段长度为 $n-l$ 的相等前后缀。于是，根据求前缀函数的方式可以找到 $s$ 的最小周期，通过失配优化可以找到其所有周期。&lt;/p&gt;
+&lt;h3 id=&#34;统计每个前缀的出现次数&#34;&gt;&lt;a href=&#34;#统计每个前缀的出现次数&#34; class=&#34;headerlink&#34; title=&#34;统计每个前缀的出现次数&#34;&gt;&lt;/a&gt;统计每个前缀的出现次数&lt;/h3&gt;&lt;p&gt;寻找 $s$ 的每一个前缀的出现次数，朴素方法是跑 $n$ 次 KMP，时间复杂度在平方量级，但是通过失配优化，很容易变成线性。&lt;/p&gt;
+&lt;h3 id=&#34;字符串压缩&#34;&gt;&lt;a href=&#34;#字符串压缩&#34; class=&#34;headerlink&#34; title=&#34;字符串压缩&#34;&gt;&lt;/a&gt;字符串压缩&lt;/h3&gt;&lt;p&gt;与字符串周期是类同的，证明比较烦。&lt;/p&gt;
+&lt;h3 id=&#34;构建自动机&#34;&gt;&lt;a href=&#34;#构建自动机&#34; class=&#34;headerlink&#34; title=&#34;构建自动机&#34;&gt;&lt;/a&gt;构建自动机&lt;/h3&gt;&lt;p&gt;先咕。&lt;/p&gt;
+</content>
+        <updated>2023-02-19T14:06:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://conless.dev/blog/cs/shulian-poufen/</id>
+        <title>数据结构（四）：树链剖分 (updating)</title>
+        <link rel="alternate" href="https://conless.dev/blog/cs/shulian-poufen/"/>
+        <content type="html">&lt;h2 id=&#34;学习计划&#34;&gt;&lt;a href=&#34;#学习计划&#34; class=&#34;headerlink&#34; title=&#34;学习计划&#34;&gt;&lt;/a&gt;学习计划&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;事项&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;详情&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;时间&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;重温基本概念&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;参考课本与 OI-wiki&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;1h&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;基础题目练习&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;复习 P2590,P2146,P3178，完成 P4427,ACMOJ1473&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;2.5h&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;概念细节与拓展&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;课本，OI-wiki，完成或学习 P1505 &amp;#x2F; P3979&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;2.5h&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;h2 id=&#34;思想&#34;&gt;&lt;a href=&#34;#思想&#34; class=&#34;headerlink&#34; title=&#34;思想&#34;&gt;&lt;/a&gt;思想&lt;/h2&gt;&lt;p&gt;将一棵树划分为若干条链，转化为线性结构，从而用其它数据结构维护相关信息。&lt;/p&gt;
+&lt;p&gt;重链剖分可以将树上的任意一条路径划分成不超过 $O(\log n)$ 条连续的链，每条链上的点深度互不相同（即是自底向上的一条链，链上所有点的 LCA 为链的一个端点）。&lt;/p&gt;
+&lt;p&gt;重链剖分还能保证划分出的每条链上的节点 DFS 序连续，因此可以方便地用一些维护序列的数据结构（如线段树）来维护树上路径的信息。&lt;/p&gt;
+&lt;h2 id=&#34;重链剖分&#34;&gt;&lt;a href=&#34;#重链剖分&#34; class=&#34;headerlink&#34; title=&#34;重链剖分&#34;&gt;&lt;/a&gt;重链剖分&lt;/h2&gt;&lt;p&gt;重链剖分是最常用的树链剖分方式：&lt;/p&gt;
+&lt;p&gt;定义 重子节点 表示其子节点中子树最大的子结点。如果有多个子树最大的子结点，取其一。如果没有子节点，就无重子节点。&lt;/p&gt;
+&lt;p&gt;定义 轻子节点 表示剩余的所有子结点。&lt;/p&gt;
+&lt;p&gt;从这个结点到重子节点的边为 重边。&lt;/p&gt;
+&lt;p&gt;到其他轻子节点的边为 轻边。&lt;/p&gt;
+&lt;p&gt;若干条首尾衔接的重边构成 重链。&lt;/p&gt;
+&lt;p&gt;把落单的结点也当作重链，那么整棵树就被剖分成若干条重链。&lt;/p&gt;
+&lt;h2 id=&#34;实现&#34;&gt;&lt;a href=&#34;#实现&#34; class=&#34;headerlink&#34; title=&#34;实现&#34;&gt;&lt;/a&gt;实现&lt;/h2&gt;&lt;p&gt;运用到的数据结构为支持 单点&amp;#x2F;区间 修改&amp;#x2F;查询 的线段树，记作&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;cpp&#34;&gt;sjtu::SegmentTree&amp;lt;int, MAXN&amp;gt; stree;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;首先进行两遍 dfs 建树&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;cpp&#34;&gt;void dfs(int u, int last) &amp;#123;
+    int maxsiz = 0;
+    siz[u] = 1;
+    fa[u] = last;
+    for (int i = head[u]; i; i = edge[i].next) &amp;#123;
+        int v = edge[i].v;
+        if (v == last)
+            continue;
+        h[v] = h[u] + 1;
+        dfs(v, u);
+        siz[u] += siz[v];
+        if (siz[v] &amp;gt; maxsiz) &amp;#123;
+            maxsiz = siz[v];
+            mson[u] = v;
+        &amp;#125;
+    &amp;#125;
+&amp;#125;
+
+void build(int u, int last, int top) &amp;#123;
+    key[u] = ++ti;
+    tp[u] = top;
+    data[ti] = w[u];
+    if (mson[u])
+        build(mson[u], u, top);
+    for (int i = head[u]; i; i = edge[i].next) &amp;#123;
+        int v = edge[i].v;
+        if (v == last || v == mson[u])
+            continue;
+        build(v, u, v);
+    &amp;#125;
+    las[u] = ti;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+        <updated>2023-01-27T06:03:43.000Z</updated>
+    </entry>
     <entry>
         <id>https://conless.dev/blog/cs/hello-world/</id>
         <title>Hello, World!</title>
