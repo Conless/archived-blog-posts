@@ -74,7 +74,7 @@ Dream Journal = 夢の日記 = Conless 的梦境日志</title>
       <i class="ic i-pen"></i>
     </span>
     <span class="text">Symbols count in article</span>
-    <span>1.4k</span>
+    <span>2.6k</span>
     <span class="text">words</span>
   </span>
   <span class="item" title="Reading time">
@@ -82,7 +82,7 @@ Dream Journal = 夢の日記 = Conless 的梦境日志</title>
       <i class="ic i-clock"></i>
     </span>
     <span class="text">Reading time</span>
-    <span>1 mins.</span>
+    <span>2 mins.</span>
   </span>
 </div>
 
@@ -115,12 +115,12 @@ Dream Journal = 夢の日記 = Conless 的梦境日志</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_82869890_20220205_105432.jpg"></li>
-          <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_59296258_20181209_131527.png"></li>
-          <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_78784805_20200123_003630.jpg"></li>
-          <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_76304928_20200214_225307.png"></li>
+          <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_84465983_20210723_161441.png"></li>
           <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_91520323_20220710_232600_1.jpg"></li>
+          <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_77784811_20200214_225300.jpg"></li>
           <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_60922957_20181209_131522.jpg"></li>
+          <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_76304928_20200214_225307.png"></li>
+          <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_87652804_20220205_105506.png"></li>
         </ul>
       </div>
     </header>
@@ -207,12 +207,35 @@ Dream Journal = 夢の日記 = Conless 的梦境日志</title>
 <p>寻找 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi></mrow><annotation encoding="application/x-tex">s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">s</span></span></span></span> 的每一个前缀的出现次数，朴素方法是跑 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 次 KMP，时间复杂度在平方量级，但是通过失配优化，很容易变成线性。</p>
 <h3 id="字符串压缩"><a class="markdownIt-Anchor" href="#字符串压缩">#</a> 字符串压缩</h3>
 <p>与字符串周期是类同的，证明比较烦。</p>
-<h3 id="构建自动机"><a class="markdownIt-Anchor" href="#构建自动机">#</a> 构建自动机</h3>
-<p>先咕。</p>
 <h1 id="字符串哈希"><a class="markdownIt-Anchor" href="#字符串哈希">#</a> 字符串哈希</h1>
 <h2 id="定义-2"><a class="markdownIt-Anchor" href="#定义-2">#</a> 定义</h2>
 <p>把字符串映射为一个整数，注意时间复杂度与 Hash 的准确率（避免 Hash 碰撞）。</p>
-
+<h2 id="应用-2"><a class="markdownIt-Anchor" href="#应用-2">#</a> 应用</h2>
+<h3 id="字符串匹配"><a class="markdownIt-Anchor" href="#字符串匹配">#</a> 字符串匹配</h3>
+<p>求文本串每个字串的哈希值，与模式串直接比较即可。</p>
+<h3 id="允许-k-次失配的字符串匹配"><a class="markdownIt-Anchor" href="#允许-k-次失配的字符串匹配">#</a> 允许 k 次失配的字符串匹配</h3>
+<p>匹配时允许至多有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span> 个位置上的字符不同（<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span> 较小）。考虑哈希 + 二分，可以在每一次匹配过程中用 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>log</mi><mo>⁡</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(\log n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span> 的时间找到所有失配字符，总时间复杂度为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>k</mi><mi>m</mi><mi>log</mi><mo>⁡</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(km\log n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord mathnormal">m</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span>。</p>
+<h3 id="最长回文子串"><a class="markdownIt-Anchor" href="#最长回文子串">#</a> 最长回文子串</h3>
+<p>枚举回文中心 + 二分，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mi>log</mi><mo>⁡</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n\log n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span>，好像 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span> 哈希也可以，先咕。</p>
+<h1 id="ac-自动机"><a class="markdownIt-Anchor" href="#ac-自动机">#</a> AC 自动机</h1>
+<h2 id="什么是自动机"><a class="markdownIt-Anchor" href="#什么是自动机">#</a> 什么是自动机？</h2>
+<p>自动机的本质是一个状态转移函数</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>δ</mi><mo stretchy="false">(</mo><mi>v</mi><mo separator="true">,</mo><mi>c</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\delta(v, c)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.03785em;">δ</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">c</span><span class="mclose">)</span></span></span></span></span></p>
+<p>其中 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi></mrow><annotation encoding="application/x-tex">v</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span></span></span></span> 代表一个状态，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi></mrow><annotation encoding="application/x-tex">c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">c</span></span></span></span> 代表一个新输入的字符。这个函数的输出结果是一个新的状态，也即：一个自动机在接受一个字符后由一种状态切换到另一种状态。有一些熟知的例子：</p>
+<ol>
+<li>Trie 树：接受一个字符后，向下沿着树边走到一个子节点；</li>
+<li>KMP 自动机：接受一个字符后，若匹配，将状态变为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">v+1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>，若失配，变为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi><mo stretchy="false">(</mo><mi>π</mi><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo><mo separator="true">,</mo><mi>c</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\delta(\pi(i),c)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.03785em;">δ</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="mopen">(</span><span class="mord mathnormal">i</span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">c</span><span class="mclose">)</span></span></span></span>。</li>
+</ol>
+<p>而 AC 自动机就是上面两者的结合。</p>
+<h2 id="用途"><a class="markdownIt-Anchor" href="#用途">#</a> 用途</h2>
+<p>一个文本串，多个模式串进行匹配</p>
+<h2 id="失配优化-2"><a class="markdownIt-Anchor" href="#失配优化-2">#</a> 失配优化</h2>
+<p>核心是在 Trie 树上跑失配指针。例如，对于字符串 abcd，bce，cf 构成的 Trie 树，若读入 abc 后在 d 处失配，将会把指针跳到 bce 字符串的 bc 后进行匹配，若再次失配，将跳到 cf 的 f 后进行匹配，依此类推。</p>
+<h2 id="实现-2"><a class="markdownIt-Anchor" href="#实现-2">#</a> 实现</h2>
+<p>首先是建立失配指针的过程</p>
+<figure class="highlight cpp"><figcaption data-lang="C++"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">void</span> <span class="token function">build</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="2"></td><td><pre>    queue<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> q<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="3"></td><td><pre>    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">26</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="4"></td><td><pre>        <span class="token keyword">if</span> <span class="token punctuation">(</span>tr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="5"></td><td><pre>            q<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>tr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="6"></td><td><pre>    <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span>q<span class="token punctuation">.</span><span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="7"></td><td><pre>        <span class="token keyword">int</span> u <span class="token operator">=</span> q<span class="token punctuation">.</span><span class="token function">front</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="8"></td><td><pre>        q<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="9"></td><td><pre>        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">26</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="10"></td><td><pre>            <span class="token keyword">if</span> <span class="token punctuation">(</span>tr<span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> <span class="token comment">// 子节点存在，让 fail 指针指向父节点（拓扑序保证父节点 fail 指针的最优性）</span></pre></td></tr><tr><td data-num="11"></td><td><pre>                fail<span class="token punctuation">[</span>tr<span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">=</span> tr<span class="token punctuation">[</span>fail<span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="12"></td><td><pre>                q<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>tr<span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="13"></td><td><pre>            <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token comment">// 子节点不存在，直接跳转</span></pre></td></tr><tr><td data-num="14"></td><td><pre>                tr<span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> tr<span class="token punctuation">[</span>fail<span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="15"></td><td><pre>        <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="16"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="17"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure><p>接下来，进行匹配时，只需要不断跳指针即可</p>
+<figure class="highlight cpp"><figcaption data-lang="C++"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">int</span> e<span class="token punctuation">[</span>MAXN<span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">//e [i] 表示以 i 结尾的模式串个数</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">int</span> <span class="token function">query</span><span class="token punctuation">(</span>std<span class="token double-colon punctuation">::</span>string t<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="3"></td><td><pre>    <span class="token keyword">int</span> u <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> ans <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="4"></td><td><pre>    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">auto</span> ch<span class="token operator">:</span> t<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="5"></td><td><pre>        u <span class="token operator">=</span> tr<span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token punctuation">[</span>ch <span class="token operator">-</span> <span class="token char">'a'</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// 一步到位跳到失配节点</span></pre></td></tr><tr><td data-num="6"></td><td><pre>        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> u<span class="token punctuation">;</span> j <span class="token operator">&amp;&amp;</span> e<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span> j <span class="token operator">=</span> fail<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="7"></td><td><pre>            ans <span class="token operator">+=</span> e<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// 把每一个匹配都记录</span></pre></td></tr><tr><td data-num="8"></td><td><pre>            e<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment">// 已经匹配到了</span></pre></td></tr><tr><td data-num="9"></td><td><pre>        <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="10"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="11"></td><td><pre>    <span class="token keyword">return</span> ans<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="12"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure>
   </div>
 
    <footer>
@@ -223,7 +246,7 @@ Dream Journal = 夢の日記 = Conless 的梦境日志</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">Edited on</span>
-    <time title="Modified: 2023-02-21 08:57:14" itemprop="dateModified" datetime="2023-02-21T08:57:14+08:00">2023-02-21</time>
+    <time title="Modified: 2023-02-21 11:10:55" itemprop="dateModified" datetime="2023-02-21T11:10:55+08:00">2023-02-21</time>
   </span>
   <span id="/cs/data-structure/string/" class="item leancloud_visitors" data-flag-title="数据结构（一）：字符串算法" title="Views">
       <span class="icon">
@@ -310,7 +333,7 @@ Dream Journal = 夢の日記 = Conless 的梦境日志</title>
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="Contents">
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E7%BC%80%E5%87%BD%E6%95%B0%E4%B8%8E-kmp-%E7%AE%97%E6%B3%95"><span class="toc-number">1.</span> <span class="toc-text"> 前缀函数与 KMP 算法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E7%BC%80%E5%87%BD%E6%95%B0"><span class="toc-number">1.1.</span> <span class="toc-text"> 前缀函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89"><span class="toc-number">1.1.1.</span> <span class="toc-text"> 定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E7%BC%80%E5%87%BD%E6%95%B0%E7%9A%84%E8%AE%A1%E7%AE%97"><span class="toc-number">1.1.2.</span> <span class="toc-text"> 前缀函数的计算</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%B4%E7%B4%A0%E7%AE%97%E6%B3%95"><span class="toc-number">1.1.2.1.</span> <span class="toc-text"> 朴素算法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8C%B9%E9%85%8D%E4%BC%98%E5%8C%96"><span class="toc-number">1.1.2.2.</span> <span class="toc-text"> 匹配优化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%B1%E9%85%8D%E4%BC%98%E5%8C%96"><span class="toc-number">1.1.2.3.</span> <span class="toc-text"> 失配优化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0"><span class="toc-number">1.1.2.4.</span> <span class="toc-text"> 实现</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%94%E7%94%A8"><span class="toc-number">1.2.</span> <span class="toc-text"> 应用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#kmp-%E7%AE%97%E6%B3%95"><span class="toc-number">1.2.1.</span> <span class="toc-text"> KMP 算法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%87%E7%A8%8B"><span class="toc-number">1.2.1.1.</span> <span class="toc-text"> 过程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AE%97%E6%B3%95"><span class="toc-number">1.2.1.2.</span> <span class="toc-text"> 算法</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B1%82%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%91%A8%E6%9C%9F"><span class="toc-number">1.2.2.</span> <span class="toc-text"> 求字符串的周期</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%9F%E8%AE%A1%E6%AF%8F%E4%B8%AA%E5%89%8D%E7%BC%80%E7%9A%84%E5%87%BA%E7%8E%B0%E6%AC%A1%E6%95%B0"><span class="toc-number">1.2.3.</span> <span class="toc-text"> 统计每个前缀的出现次数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8E%8B%E7%BC%A9"><span class="toc-number">1.2.4.</span> <span class="toc-text"> 字符串压缩</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9E%84%E5%BB%BA%E8%87%AA%E5%8A%A8%E6%9C%BA"><span class="toc-number">1.2.5.</span> <span class="toc-text"> 构建自动机</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%93%88%E5%B8%8C"><span class="toc-number">2.</span> <span class="toc-text"> 字符串哈希</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89-2"><span class="toc-number">2.1.</span> <span class="toc-text"> 定义</span></a></li></ol></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E7%BC%80%E5%87%BD%E6%95%B0%E4%B8%8E-kmp-%E7%AE%97%E6%B3%95"><span class="toc-number">1.</span> <span class="toc-text"> 前缀函数与 KMP 算法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E7%BC%80%E5%87%BD%E6%95%B0"><span class="toc-number">1.1.</span> <span class="toc-text"> 前缀函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89"><span class="toc-number">1.1.1.</span> <span class="toc-text"> 定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E7%BC%80%E5%87%BD%E6%95%B0%E7%9A%84%E8%AE%A1%E7%AE%97"><span class="toc-number">1.1.2.</span> <span class="toc-text"> 前缀函数的计算</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%B4%E7%B4%A0%E7%AE%97%E6%B3%95"><span class="toc-number">1.1.2.1.</span> <span class="toc-text"> 朴素算法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8C%B9%E9%85%8D%E4%BC%98%E5%8C%96"><span class="toc-number">1.1.2.2.</span> <span class="toc-text"> 匹配优化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%B1%E9%85%8D%E4%BC%98%E5%8C%96"><span class="toc-number">1.1.2.3.</span> <span class="toc-text"> 失配优化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0"><span class="toc-number">1.1.2.4.</span> <span class="toc-text"> 实现</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%94%E7%94%A8"><span class="toc-number">1.2.</span> <span class="toc-text"> 应用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#kmp-%E7%AE%97%E6%B3%95"><span class="toc-number">1.2.1.</span> <span class="toc-text"> KMP 算法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%87%E7%A8%8B"><span class="toc-number">1.2.1.1.</span> <span class="toc-text"> 过程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AE%97%E6%B3%95"><span class="toc-number">1.2.1.2.</span> <span class="toc-text"> 算法</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B1%82%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%91%A8%E6%9C%9F"><span class="toc-number">1.2.2.</span> <span class="toc-text"> 求字符串的周期</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%9F%E8%AE%A1%E6%AF%8F%E4%B8%AA%E5%89%8D%E7%BC%80%E7%9A%84%E5%87%BA%E7%8E%B0%E6%AC%A1%E6%95%B0"><span class="toc-number">1.2.3.</span> <span class="toc-text"> 统计每个前缀的出现次数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8E%8B%E7%BC%A9"><span class="toc-number">1.2.4.</span> <span class="toc-text"> 字符串压缩</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%93%88%E5%B8%8C"><span class="toc-number">2.</span> <span class="toc-text"> 字符串哈希</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89-2"><span class="toc-number">2.1.</span> <span class="toc-text"> 定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%94%E7%94%A8-2"><span class="toc-number">2.2.</span> <span class="toc-text"> 应用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D"><span class="toc-number">2.2.1.</span> <span class="toc-text"> 字符串匹配</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%81%E8%AE%B8-k-%E6%AC%A1%E5%A4%B1%E9%85%8D%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D"><span class="toc-number">2.2.2.</span> <span class="toc-text"> 允许 k 次失配的字符串匹配</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2"><span class="toc-number">2.2.3.</span> <span class="toc-text"> 最长回文子串</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ac-%E8%87%AA%E5%8A%A8%E6%9C%BA"><span class="toc-number">3.</span> <span class="toc-text"> AC 自动机</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E8%87%AA%E5%8A%A8%E6%9C%BA"><span class="toc-number">3.1.</span> <span class="toc-text"> 什么是自动机？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%A8%E9%80%94"><span class="toc-number">3.2.</span> <span class="toc-text"> 用途</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%B1%E9%85%8D%E4%BC%98%E5%8C%96-2"><span class="toc-number">3.3.</span> <span class="toc-text"> 失配优化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0-2"><span class="toc-number">3.4.</span> <span class="toc-text"> 实现</span></a></li></ol></li></ol>
       </div>
       <div class="related panel pjax" data-title="Related">
         <ul>
@@ -425,6 +448,16 @@ Dream Journal = 夢の日記 = Conless 的梦境日志</title>
   <li class="item">
     
 <div class="breadcrumb">
+<a href="/blog/categories/cs/" title="In Computer Science">Computer Science</a>
+</div>
+
+    <span><a href="/blog/cs/gdkoi-note/" title="GDKOI2021 游记">GDKOI2021 游记</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
 <a href="/blog/categories/jotting/" title="In Jottings">Jottings</a>
 </div>
 
@@ -435,10 +468,12 @@ Dream Journal = 夢の日記 = Conless 的梦境日志</title>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/blog/categories/jotting/" title="In Jottings">Jottings</a>
+<a href="/blog/categories/cs/" title="In Computer Science">Computer Science</a>
+<i class="ic i-angle-right"></i>
+<a href="/blog/categories/cs/data-structure/" title="In Data Structure (CS1951@SJTU)">Data Structure (CS1951@SJTU)</a>
 </div>
 
-    <span><a href="/blog/jotting/gaokao-summary/" title="尘埃落定">尘埃落定</a></span>
+    <span><a href="/blog/cs/data-structure/string/" title="数据结构（一）：字符串算法">数据结构（一）：字符串算法</a></span>
   </li>
 
       
@@ -455,16 +490,6 @@ Dream Journal = 夢の日記 = Conless 的梦境日志</title>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/blog/categories/travel/" title="In Travel Notes">Travel Notes</a>
-</div>
-
-    <span><a href="/blog/travel/fangsuo-travel-note/" title="重逢方所 (images to be fixed)">重逢方所 (images to be fixed)</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
 <a href="/blog/categories/default/" title="In Uncategorized">Uncategorized</a>
 </div>
 
@@ -475,10 +500,10 @@ Dream Journal = 夢の日記 = Conless 的梦境日志</title>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/blog/categories/cs/" title="In Computer Science">Computer Science</a>
+<a href="/blog/categories/jotting/" title="In Jottings">Jottings</a>
 </div>
 
-    <span><a href="/blog/cs/gdkoi-note/" title="GDKOI2021 游记">GDKOI2021 游记</a></span>
+    <span><a href="/blog/jotting/gaokao-summary/" title="尘埃落定">尘埃落定</a></span>
   </li>
 
       
@@ -505,12 +530,10 @@ Dream Journal = 夢の日記 = Conless 的梦境日志</title>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/blog/categories/cs/" title="In Computer Science">Computer Science</a>
-<i class="ic i-angle-right"></i>
-<a href="/blog/categories/cs/data-structure/" title="In Data Structure (CS1951@SJTU)">Data Structure (CS1951@SJTU)</a>
+<a href="/blog/categories/travel/" title="In Travel Notes">Travel Notes</a>
 </div>
 
-    <span><a href="/blog/cs/data-structure/string/" title="数据结构（一）：字符串算法">数据结构（一）：字符串算法</a></span>
+    <span><a href="/blog/travel/fangsuo-travel-note/" title="重逢方所 (images to be fixed)">重逢方所 (images to be fixed)</a></span>
   </li>
 
       
@@ -545,13 +568,13 @@ Dream Journal = 夢の日記 = Conless 的梦境日志</title>
     <span class="post-meta-item-icon">
       <i class="ic i-chart-area"></i>
     </span>
-    <span title="Symbols count total">9k words</span>
+    <span title="Symbols count total">11k words</span>
 
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="ic i-coffee"></i>
     </span>
-    <span title="Reading time total">8 mins.</span>
+    <span title="Reading time total">10 mins.</span>
   </div>
   <div class="powered-by">
     Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
