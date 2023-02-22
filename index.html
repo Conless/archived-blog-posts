@@ -90,11 +90,11 @@
       <div id="imgs" class="pjax">
         <ul>
           <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_76304928_20200214_225307.png"></li>
-          <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_60922957_20181209_131522.jpg"></li>
-          <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_82869890_20220205_105432.jpg"></li>
-          <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_77784811_20200214_225300.jpg"></li>
-          <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_59296258_20181209_131527.png"></li>
+          <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_84465983_20210723_161441.png"></li>
           <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_87652804_20220205_105506.png"></li>
+          <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_91520323_20220710_232600_1.jpg"></li>
+          <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_78784805_20200123_003630.jpg"></li>
+          <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_77784811_20200214_225300.jpg"></li>
         </ul>
       </div>
     </header>
@@ -121,7 +121,7 @@
           
 <article class="item">
   <div class="cover">
-    <a href="/blog/default/update-log/" itemprop="url" title="博客功能更新日志 (updating)"><img data-src="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_87652804_20220205_105506.png"></a>
+    <a href="/blog/default/update-log/" itemprop="url" title="博客功能更新日志 (updating)"><img data-src="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_59296258_20181209_131527.png"></a>
   </div>
   <div class="info">
     
@@ -224,7 +224,7 @@ Q2 2023
         </ul>
         <div class="meta footer">
           <span>
-            <i class="ic i-file"></i>1 subcategories in total, 4 posts in total
+            <i class="ic i-file"></i>1 subcategories in total, 6 posts in total
           </span>
         </div>
         <a href="/blog/categories/cs/" itemprop="url" title="Computer Science" class="btn">more...</a>
@@ -281,7 +281,61 @@ Q2 2023
         
 <article class="item">
   <div class="cover">
-    <a href="/blog/cs/data-structure/string/" itemprop="url" title="数据结构（一）：字符串算法"><img data-src="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_82869890_20220205_105432.jpg"></a>
+    <a href="/blog/cs/data-structure/priority_queue/" itemprop="url" title="数据结构（三）：堆与 STL priority_queue"><img data-src="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_87652804_20220205_105506.png"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="Created: 2023-02-21 11:32:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2023-02-21T11:32:00+08:00">2023-02-21</time>
+  </span>
+  <span class="item" title="Symbols count in article">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>1.2k</span>
+    <span class="text">words</span>
+  </span>
+  <span class="item" title="Reading time">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>1 mins.</span>
+  </span>
+</div>
+
+    <h3><a href="/blog/cs/data-structure/priority_queue/" itemprop="url" title="数据结构（三）：堆与 STL priority_queue">数据结构（三）：堆与 STL priority_queue</a></h3>
+    <div class="excerpt">
+        # 堆
+# 简介
+相较于平衡树等，堆是一种约束较为自由的数据结构，只需要满足父节点的键值大于 / 小于子节点即可。
+# 二叉堆
+下面讲解以二叉堆方式实现的大根堆，它是一棵完全二叉树，其保持平衡的基本方式是向上调整（子节点与父节点交换）与向下调整。
+# 插入
+在插入时，将新的节点插入到完全二叉树的最后一个位置，然后不断向上调整；
+# 删除
+在删除根节点时，将其与最后一个节点交换，将其删除，然后将新的根节点不断向下调整。
+# 建树
+假设直接按照顺序构建出一棵完全二叉树，然后对其调整使得满足堆的性质，有两种方案：
+
+从根开始，不断向上调整，这样在越深处越多节点，走的距离期望越长，总的复杂度期望为...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/blog/categories/cs/data-structure/" itemprop="url" title="Data Structure (CS1951@SJTU)"><i class="ic i-flag"></i>Data Structure (CS1951@SJTU)</a>
+      </span>
+    </div>
+    <a href="/blog/cs/data-structure/priority_queue/" itemprop="url" title="数据结构（三）：堆与 STL priority_queue" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/blog/cs/data-structure/string_algo/" itemprop="url" title="数据结构（二）：字符串算法"><img data-src="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_59296258_20181209_131527.png"></a>
   </div>
   <div class="info">
     
@@ -307,7 +361,7 @@ Q2 2023
   </span>
 </div>
 
-    <h3><a href="/blog/cs/data-structure/string/" itemprop="url" title="数据结构（一）：字符串算法">数据结构（一）：字符串算法</a></h3>
+    <h3><a href="/blog/cs/data-structure/string_algo/" itemprop="url" title="数据结构（二）：字符串算法">数据结构（二）：字符串算法</a></h3>
     <div class="excerpt">
         # 前缀函数与 KMP 算法
 # 前缀函数
@@ -322,14 +376,56 @@ s[0⋯k−1]=s[n−k+1⋯n]
         <a href="/blog/categories/cs/data-structure/" itemprop="url" title="Data Structure (CS1951@SJTU)"><i class="ic i-flag"></i>Data Structure (CS1951@SJTU)</a>
       </span>
     </div>
-    <a href="/blog/cs/data-structure/string/" itemprop="url" title="数据结构（一）：字符串算法" class="btn">more...</a>
+    <a href="/blog/cs/data-structure/string_algo/" itemprop="url" title="数据结构（二）：字符串算法" class="btn">more...</a>
   </div>
 </article>
 
         
 <article class="item">
   <div class="cover">
-    <a href="/blog/cs/shulian-poufen/" itemprop="url" title="数据结构（四）：树链剖分 (updating)"><img data-src="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_87652804_20220205_105506.png"></a>
+    <a href="/blog/cs/data-structure/vector/" itemprop="url" title="数据结构（一）：STL vector"><img data-src="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_59296258_20181209_131527.png"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="Created: 2023-02-19 10:10:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2023-02-19T10:10:00+08:00">2023-02-19</time>
+  </span>
+  <span class="item" title="Symbols count in article">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>0</span>
+    <span class="text">words</span>
+  </span>
+  <span class="item" title="Reading time">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>1 mins.</span>
+  </span>
+</div>
+
+    <h3><a href="/blog/cs/data-structure/vector/" itemprop="url" title="数据结构（一）：STL vector">数据结构（一）：STL vector</a></h3>
+    <div class="excerpt">
+        
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/blog/categories/cs/data-structure/" itemprop="url" title="Data Structure (CS1951@SJTU)"><i class="ic i-flag"></i>Data Structure (CS1951@SJTU)</a>
+      </span>
+    </div>
+    <a href="/blog/cs/data-structure/vector/" itemprop="url" title="数据结构（一）：STL vector" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/blog/cs/shulian-poufen/" itemprop="url" title="数据结构（四）：树链剖分 (updating)"><img data-src="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_59296258_20181209_131527.png"></a>
   </div>
   <div class="info">
     
@@ -391,7 +487,7 @@ s[0⋯k−1]=s[n−k+1⋯n]
         
 <article class="item">
   <div class="cover">
-    <a href="/blog/cs/hello-world/" itemprop="url" title="Hello, World!"><img data-src="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_84465983_20210723_161441.png"></a>
+    <a href="/blog/cs/hello-world/" itemprop="url" title="Hello, World!"><img data-src="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_59296258_20181209_131527.png"></a>
   </div>
   <div class="info">
     
@@ -495,7 +591,7 @@ git clone...
         
 <article class="item">
   <div class="cover">
-    <a href="/blog/travel/jiuzhai-travel-note/" itemprop="url" title="九寨沟游记 (images to be fixed)"><img data-src="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_84465983_20210723_161441.png"></a>
+    <a href="/blog/travel/jiuzhai-travel-note/" itemprop="url" title="九寨沟游记 (images to be fixed)"><img data-src="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_78784805_20200123_003630.jpg"></a>
   </div>
   <div class="info">
     
@@ -635,7 +731,7 @@ git clone...
         
 <article class="item">
   <div class="cover">
-    <a href="/blog/math/texun-research/" itemprop="url" title="2022 年寒假特训营研究报告"><img data-src="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_59296258_20181209_131527.png"></a>
+    <a href="/blog/math/texun-research/" itemprop="url" title="2022 年寒假特训营研究报告"><img data-src="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_60922957_20181209_131522.jpg"></a>
   </div>
   <div class="info">
     
@@ -674,63 +770,16 @@ git clone...
   </div>
 </article>
 
-        
-<article class="item">
-  <div class="cover">
-    <a href="/blog/cs/gdkoi-note/" itemprop="url" title="GDKOI2021 游记"><img data-src="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_76304928_20200214_225307.png"></a>
-  </div>
-  <div class="info">
-    
-<div class="meta">
-  <span class="item" title="Created: 2021-01-20 11:25:43">
-    <span class="icon">
-      <i class="ic i-calendar"></i>
-    </span>
-    <time itemprop="dateCreated datePublished" datetime="2021-01-20T11:25:43+08:00">2021-01-20</time>
-  </span>
-  <span class="item" title="Symbols count in article">
-    <span class="icon">
-      <i class="ic i-pen"></i>
-    </span>
-    <span>2k</span>
-    <span class="text">words</span>
-  </span>
-  <span class="item" title="Reading time">
-    <span class="icon">
-      <i class="ic i-clock"></i>
-    </span>
-    <span>2 mins.</span>
-  </span>
-</div>
-
-    <h3><a href="/blog/cs/gdkoi-note/" itemprop="url" title="GDKOI2021 游记">GDKOI2021 游记</a></h3>
-    <div class="excerpt">
-        # Day -1
-从学农回来了，已经快两个月没碰过信息学了。。
-晚上家长还发了期末考排名。。挂的很厉害，要不是理科保命前 20 都没了。。
-看了看自己的博客发现 noip 游记果然咕了，等 WC2021 退役后再来统一更吧
-# Day 0
-划水
-# Day 1 (21.1.30)
-进场用了半小时看题，感觉 T1 T2 T3T1\ T2\ T3T1 T2 T3 可做，T2T2T2 很像之前 gshgshgsh 出的一题，但没深入想
-# T3
-按照开题顺序写吧，想了十分钟感觉可以直接预处理中心回文串 + 二分答案
-本来想上 manachermanachermanacher...
-    </div>
-    <div class="meta footer">
-      <span>
-        <a href="/blog/categories/cs/" itemprop="url" title="Computer Science"><i class="ic i-flag"></i>Computer Science</a>
-      </span>
-    </div>
-    <a href="/blog/cs/gdkoi-note/" itemprop="url" title="GDKOI2021 游记" class="btn">more...</a>
-  </div>
-</article>
-
     </div>
 
   </div>
 
   
+  <nav class="pagination">
+    <div class="inner">
+    <span class="page-number current">1</span><a class="page-number" href="/blog/page/2/">2</a><a class="extend next" rel="next" href="/blog/page/2/"><i class="ic i-angle-right" aria-label="Next page"></i></a>
+    </div>
+  </nav>
 
 
 
@@ -756,7 +805,7 @@ git clone...
 <nav class="state">
     <div class="item posts">
       <a href="/blog/archives/">
-        <span class="count">10</span>
+        <span class="count">12</span>
         <span class="name">posts</span>
       </a>
     </div>
@@ -832,6 +881,7 @@ git clone...
     <li class="up"><i class="ic i-arrow-up"></i></li>
     <li class="down"><i class="ic i-arrow-down"></i></li>
     <li class="next pjax">
+        <a href="/blog/page/2/" rel="next" title="Next Post"><i class="ic i-chevron-right"></i></a>
     </li>
     <li class="percent"></li>
   </ul>
@@ -852,40 +902,10 @@ git clone...
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/blog/categories/travel/" title="In Travel Notes">Travel Notes</a>
-</div>
-
-    <span><a href="/blog/travel/jiuzhai-travel-note/" title="九寨沟游记 (images to be fixed)">九寨沟游记 (images to be fixed)</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
 <a href="/blog/categories/cs/" title="In Computer Science">Computer Science</a>
 </div>
 
-    <span><a href="/blog/cs/gdkoi-note/" title="GDKOI2021 游记">GDKOI2021 游记</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/blog/categories/math/" title="In Math">Math</a>
-</div>
-
-    <span><a href="/blog/math/texun-research/" title="2022 年寒假特训营研究报告">2022 年寒假特训营研究报告</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/blog/categories/jotting/" title="In Jottings">Jottings</a>
-</div>
-
-    <span><a href="/blog/jotting/gaokao-summary/" title="尘埃落定">尘埃落定</a></span>
+    <span><a href="/blog/cs/shulian-poufen/" title="数据结构（四）：树链剖分 (updating)">数据结构（四）：树链剖分 (updating)</a></span>
   </li>
 
       
@@ -902,20 +922,10 @@ git clone...
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/blog/categories/travel/" title="In Travel Notes">Travel Notes</a>
+<a href="/blog/categories/jotting/" title="In Jottings">Jottings</a>
 </div>
 
-    <span><a href="/blog/travel/fangsuo-travel-note/" title="重逢方所 (images to be fixed)">重逢方所 (images to be fixed)</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/blog/categories/default/" title="In Uncategorized">Uncategorized</a>
-</div>
-
-    <span><a href="/blog/default/update-log/" title="博客功能更新日志 (updating)">博客功能更新日志 (updating)</a></span>
+    <span><a href="/blog/jotting/gaokao-summary/" title="尘埃落定">尘埃落定</a></span>
   </li>
 
       
@@ -933,11 +943,9 @@ git clone...
     
 <div class="breadcrumb">
 <a href="/blog/categories/cs/" title="In Computer Science">Computer Science</a>
-<i class="ic i-angle-right"></i>
-<a href="/blog/categories/cs/data-structure/" title="In Data Structure (CS1951@SJTU)">Data Structure (CS1951@SJTU)</a>
 </div>
 
-    <span><a href="/blog/cs/data-structure/string/" title="数据结构（一）：字符串算法">数据结构（一）：字符串算法</a></span>
+    <span><a href="/blog/cs/gdkoi-note/" title="GDKOI2021 游记">GDKOI2021 游记</a></span>
   </li>
 
       
@@ -945,9 +953,55 @@ git clone...
     
 <div class="breadcrumb">
 <a href="/blog/categories/cs/" title="In Computer Science">Computer Science</a>
+<i class="ic i-angle-right"></i>
+<a href="/blog/categories/cs/data-structure/" title="In Data Structure (CS1951@SJTU)">Data Structure (CS1951@SJTU)</a>
 </div>
 
-    <span><a href="/blog/cs/shulian-poufen/" title="数据结构（四）：树链剖分 (updating)">数据结构（四）：树链剖分 (updating)</a></span>
+    <span><a href="/blog/cs/data-structure/priority_queue/" title="数据结构（三）：堆与 STL priority_queue">数据结构（三）：堆与 STL priority_queue</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/blog/categories/travel/" title="In Travel Notes">Travel Notes</a>
+</div>
+
+    <span><a href="/blog/travel/jiuzhai-travel-note/" title="九寨沟游记 (images to be fixed)">九寨沟游记 (images to be fixed)</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/blog/categories/cs/" title="In Computer Science">Computer Science</a>
+<i class="ic i-angle-right"></i>
+<a href="/blog/categories/cs/data-structure/" title="In Data Structure (CS1951@SJTU)">Data Structure (CS1951@SJTU)</a>
+</div>
+
+    <span><a href="/blog/cs/data-structure/string_algo/" title="数据结构（二）：字符串算法">数据结构（二）：字符串算法</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/blog/categories/cs/" title="In Computer Science">Computer Science</a>
+<i class="ic i-angle-right"></i>
+<a href="/blog/categories/cs/data-structure/" title="In Data Structure (CS1951@SJTU)">Data Structure (CS1951@SJTU)</a>
+</div>
+
+    <span><a href="/blog/cs/data-structure/vector/" title="数据结构（一）：STL vector">数据结构（一）：STL vector</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/blog/categories/travel/" title="In Travel Notes">Travel Notes</a>
+</div>
+
+    <span><a href="/blog/travel/fangsuo-travel-note/" title="重逢方所 (images to be fixed)">重逢方所 (images to be fixed)</a></span>
   </li>
 
   </ul>
@@ -972,13 +1026,13 @@ git clone...
     <span class="post-meta-item-icon">
       <i class="ic i-chart-area"></i>
     </span>
-    <span title="Symbols count total">11k words</span>
+    <span title="Symbols count total">12k words</span>
 
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="ic i-coffee"></i>
     </span>
-    <span title="Reading time total">10 mins.</span>
+    <span title="Reading time total">11 mins.</span>
   </div>
   <div class="powered-by">
     Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>

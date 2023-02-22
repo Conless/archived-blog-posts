@@ -1,0 +1,599 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/blog/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="夢の日記" href="https://conless.dev/blog/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="夢の日記" href="https://conless.dev/blog/atom.xml" />
+<link rel="alternate" type="application/json" title="夢の日記" href="https://conless.dev/blog/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/blog/css/app.css?v=0.2.5">
+
+  
+
+<link rel="canonical" href="https://conless.dev/blog/cs/data-structure/priority_queue/">
+
+
+
+  <title>
+数据结构（三）：堆与 STL priority_queue - Data Structure (CS1951@SJTU) - Computer Science |
+Dream Journal = 夢の日記 = Conless 的梦境日志</title>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">数据结构（三）：堆与 STL priority_queue
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="Created: 2023-02-21 11:32:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">Posted on</span>
+    <time itemprop="dateCreated datePublished" datetime="2023-02-21T11:32:00+08:00">2023-02-21</time>
+  </span>
+  <span class="item" title="Symbols count in article">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">Symbols count in article</span>
+    <span>1.2k</span>
+    <span class="text">words</span>
+  </span>
+  <span class="item" title="Reading time">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">Reading time</span>
+    <span>1 mins.</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="Toggle navigation bar">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/blog/" rel="start">Dream Journal</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_82869890_20220205_105432.jpg"></li>
+          <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_77784811_20200214_225300.jpg"></li>
+          <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_78784805_20200123_003630.jpg"></li>
+          <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_87652804_20220205_105506.png"></li>
+          <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_59296258_20181209_131527.png"></li>
+          <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_76760261_20191215_005134.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/blog/">Blog</a></span><i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/blog/categories/cs/" itemprop="item" rel="index" title="In Computer Science"><span itemprop="name">Computer Science</span></a>
+<meta itemprop="position" content="1" /></span>
+<i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/blog/categories/cs/data-structure/" itemprop="item" rel="index" title="In Data Structure (CS1951@SJTU)"><span itemprop="name">Data Structure (CS1951@SJTU)</span></a>
+<meta itemprop="position" content="2" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
+  <link itemprop="mainEntityOfPage" href="https://conless.dev/blog/cs/data-structure/priority_queue/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/blog/images/avatar.jpg">
+    <meta itemprop="name" content="Conless Pan">
+    <meta itemprop="description" content="Conless 的梦境日志, Stay hungry. Stay foolish.">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="夢の日記">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="堆"><a class="markdownIt-Anchor" href="#堆">#</a> 堆</h1>
+<h2 id="简介"><a class="markdownIt-Anchor" href="#简介">#</a> 简介</h2>
+<p>相较于平衡树等，堆是一种约束较为自由的数据结构，只需要满足父节点的键值大于 / 小于子节点即可。</p>
+<h2 id="二叉堆"><a class="markdownIt-Anchor" href="#二叉堆">#</a> 二叉堆</h2>
+<p>下面讲解以二叉堆方式实现的大根堆，它是一棵完全二叉树，其保持平衡的基本方式是向上调整（子节点与父节点交换）与向下调整。</p>
+<h3 id="插入"><a class="markdownIt-Anchor" href="#插入">#</a> 插入</h3>
+<p>在插入时，将新的节点插入到完全二叉树的最后一个位置，然后不断向上调整；</p>
+<h3 id="删除"><a class="markdownIt-Anchor" href="#删除">#</a> 删除</h3>
+<p>在删除根节点时，将其与最后一个节点交换，将其删除，然后将新的根节点不断向下调整。</p>
+<h3 id="建树"><a class="markdownIt-Anchor" href="#建树">#</a> 建树</h3>
+<p>假设直接按照顺序构建出一棵完全二叉树，然后对其调整使得满足堆的性质，有两种方案：</p>
+<ol>
+<li>从根开始，不断向上调整，这样在越深处越多节点，走的距离期望越长，总的复杂度期望为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mi>log</mi><mo>⁡</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n\log n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span>。</li>
+<li>从叶子节点开始，不断向下调整，这样在越深处越多节点，但走的距离期望短，总的复杂度期望为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span>。</li>
+</ol>
+<p>因此，采取第二种方案更加合理。</p>
+<h3 id="应用"><a class="markdownIt-Anchor" href="#应用">#</a> 应用</h3>
+<p>对顶堆：一个小根堆与一个大根堆结合，共同维护序列的第 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span> 大数。</p>
+<h2 id="左偏树"><a class="markdownIt-Anchor" href="#左偏树">#</a> 左偏树</h2>
+<p>左偏树是一种可并堆。它是一棵具有 “左偏” 性质的二叉树。</p>
+<h3 id="左偏性"><a class="markdownIt-Anchor" href="#左偏性">#</a> 左偏性</h3>
+<p>dist：一个节点到子节点中外节点的最短距离，其中外节点指没有左儿子或没有右儿子的节点。<br>
+左偏性：若一棵二叉树中任意节点左儿子的 dist 大于右儿子的 dist，称其具有左偏性。</p>
+<h3 id="合并"><a class="markdownIt-Anchor" href="#合并">#</a> 合并</h3>
+<p>合并操作是一个左偏树的核心操作，他同时完成了合并两组数据与维持树的高度两个操作。其核心思想是，尽可能地往右子树里面添加东西，如果发现添加出了问题，就将左右子树交换。递归地讲：</p>
+<ol>
+<li>对于两个左偏树，去值较小的根作为树根</li>
+<li>将另一棵树与右子树合并</li>
+<li>检查是否需要交换左右子树</li>
+</ol>
+<h3 id="其他操作"><a class="markdownIt-Anchor" href="#其他操作">#</a> 其他操作</h3>
+<ol>
+<li>插入：树与节点的合并</li>
+<li>删除：合并根的左右儿子</li>
+</ol>
+<h3 id="拓展操作"><a class="markdownIt-Anchor" href="#拓展操作">#</a> 拓展操作</h3>
+<ol>
+<li>删除任意节点：将左右儿子合并，向上更新 dist 直到无需更新</li>
+<li>整个堆进行算术操作：在根上打标记，删除 / 合并的时候 pushdown 即可</li>
+</ol>
+<h3 id="实现"><a class="markdownIt-Anchor" href="#实现">#</a> 实现</h3>
+<figure class="highlight cpp"><figcaption data-lang="C++"></figcaption><table><tr><td data-num="1"></td><td><pre>node <span class="token operator">*</span><span class="token function">merge</span><span class="token punctuation">(</span>node <span class="token operator">*</span>x<span class="token punctuation">,</span> node <span class="token operator">*</span>y<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="2"></td><td><pre>    <span class="token keyword">if</span> <span class="token punctuation">(</span>x <span class="token operator">==</span> <span class="token keyword">nullptr</span> <span class="token operator">||</span> y <span class="token operator">==</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="3"></td><td><pre>        <span class="token keyword">if</span> <span class="token punctuation">(</span>x <span class="token operator">==</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="4"></td><td><pre>            x <span class="token operator">=</span> y<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="5"></td><td><pre>        <span class="token keyword">else</span></pre></td></tr><tr><td data-num="6"></td><td><pre>            y <span class="token operator">=</span> x<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="7"></td><td><pre>        <span class="token keyword">return</span> x<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="8"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="9"></td><td><pre>    <span class="token keyword">if</span> <span class="token punctuation">(</span>x<span class="token operator">-></span>data <span class="token operator">></span> y<span class="token operator">-></span>data<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="10"></td><td><pre>        <span class="token function">swap</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="11"></td><td><pre>    x<span class="token operator">-></span>rson <span class="token operator">=</span> <span class="token function">merge</span><span class="token punctuation">(</span>x<span class="token operator">-></span>rson<span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="12"></td><td><pre>    x<span class="token operator">-></span>rson<span class="token operator">-></span>rt <span class="token operator">=</span> x<span class="token operator">-></span>rt<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="13"></td><td><pre>    <span class="token keyword">if</span> <span class="token punctuation">(</span>x<span class="token operator">-></span>lson <span class="token operator">==</span> <span class="token keyword">nullptr</span> <span class="token operator">||</span> x<span class="token operator">-></span>lson<span class="token operator">-></span>dis <span class="token operator">&lt;</span> x<span class="token operator">-></span>rson<span class="token operator">-></span>dis<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="14"></td><td><pre>        <span class="token function">swap</span><span class="token punctuation">(</span>x<span class="token operator">-></span>lson<span class="token punctuation">,</span> x<span class="token operator">-></span>rson<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="15"></td><td><pre>    x<span class="token operator">-></span>dis <span class="token operator">=</span> <span class="token punctuation">(</span>x<span class="token operator">-></span>rson <span class="token operator">!=</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span> <span class="token operator">?</span> x<span class="token operator">-></span>rson<span class="token operator">-></span>dis <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="16"></td><td><pre>    <span class="token keyword">return</span> x<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="17"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="18"></td><td><pre></pre></td></tr><tr><td data-num="19"></td><td><pre><span class="token keyword">void</span> <span class="token function">erase</span><span class="token punctuation">(</span>node <span class="token operator">*</span>x<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="20"></td><td><pre>    x<span class="token operator">-></span>rt <span class="token operator">=</span> <span class="token function">merge</span><span class="token punctuation">(</span>x<span class="token operator">-></span>lson<span class="token punctuation">,</span> x<span class="token operator">-></span>rson<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="21"></td><td><pre>    <span class="token keyword">if</span> <span class="token punctuation">(</span>x<span class="token operator">-></span>lson<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="22"></td><td><pre>        x<span class="token operator">-></span>lson<span class="token operator">-></span>rt <span class="token operator">=</span> x<span class="token operator">-></span>rt<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="23"></td><td><pre>    <span class="token keyword">if</span> <span class="token punctuation">(</span>x<span class="token operator">-></span>rson<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="24"></td><td><pre>        x<span class="token operator">-></span>rson<span class="token operator">-></span>rt <span class="token operator">=</span> x<span class="token operator">-></span>rt<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="25"></td><td><pre>    x<span class="token operator">-></span>dis <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="26"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">Edited on</span>
+    <time title="Modified: 2023-02-22 16:31:55" itemprop="dateModified" datetime="2023-02-22T16:31:55+08:00">2023-02-22</time>
+  </span>
+  <span id="/cs/data-structure/priority_queue/" class="item leancloud_visitors" data-flag-title="数据结构（三）：堆与 STL priority_queue" title="Views">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">Views</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">times</span>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> Donate</button>
+  <p>Give me a cup of [coffee]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/blog/images/wechatpay.png" alt="Conless Pan WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+      
+      <div>
+        <img data-src="/blog/images/alipay.png" alt="Conless Pan Alipay">
+        <p>Alipay</p>
+      </div>
+      
+      <div>
+        <img data-src="/blog/images/paypal.png" alt="Conless Pan PayPal">
+        <p>PayPal</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>Post author:  </strong>Conless Pan <i class="ic i-at"><em>@</em></i>夢の日記
+  </li>
+  <li class="link">
+    <strong>Post link: </strong>
+    <a href="https://conless.dev/blog/cs/data-structure/priority_queue/" title="数据结构（三）：堆与 STL priority_queue">https://conless.dev/blog/cs/data-structure/priority_queue/</a>
+  </li>
+  <li class="license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/blog/cs/data-structure/string_algo/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;conless-imagehost.oss-cn-hangzhou.aliyuncs.com&#x2F;images&#x2F;illust_77784811_20200214_225300.jpg" title="数据结构（二）：字符串算法">
+  <span class="type">Previous Post</span>
+  <span class="category"><i class="ic i-flag"></i> Data Structure (CS1951@SJTU)</span>
+  <h3>数据结构（二）：字符串算法</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="Contents">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A0%86"><span class="toc-number">1.</span> <span class="toc-text"> 堆</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-number">1.1.</span> <span class="toc-text"> 简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E5%8F%89%E5%A0%86"><span class="toc-number">1.2.</span> <span class="toc-text"> 二叉堆</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%92%E5%85%A5"><span class="toc-number">1.2.1.</span> <span class="toc-text"> 插入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A0%E9%99%A4"><span class="toc-number">1.2.2.</span> <span class="toc-text"> 删除</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BB%BA%E6%A0%91"><span class="toc-number">1.2.3.</span> <span class="toc-text"> 建树</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BA%94%E7%94%A8"><span class="toc-number">1.2.4.</span> <span class="toc-text"> 应用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B7%A6%E5%81%8F%E6%A0%91"><span class="toc-number">1.3.</span> <span class="toc-text"> 左偏树</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A6%E5%81%8F%E6%80%A7"><span class="toc-number">1.3.1.</span> <span class="toc-text"> 左偏性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%88%E5%B9%B6"><span class="toc-number">1.3.2.</span> <span class="toc-text"> 合并</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E6%93%8D%E4%BD%9C"><span class="toc-number">1.3.3.</span> <span class="toc-text"> 其他操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8B%93%E5%B1%95%E6%93%8D%E4%BD%9C"><span class="toc-number">1.3.4.</span> <span class="toc-text"> 拓展操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0"><span class="toc-number">1.3.5.</span> <span class="toc-text"> 实现</span></a></li></ol></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="Related">
+        <ul>
+          <li><a href="/blog/cs/data-structure/vector/" rel="bookmark" title="数据结构（一）：STL vector">数据结构（一）：STL vector</a></li><li><a href="/blog/cs/data-structure/string_algo/" rel="bookmark" title="数据结构（二）：字符串算法">数据结构（二）：字符串算法</a></li><li class="active"><a href="/blog/cs/data-structure/priority_queue/" rel="bookmark" title="数据结构（三）：堆与 STL priority_queue">数据结构（三）：堆与 STL priority_queue</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="Overview">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="Conless Pan"
+      data-src="/blog/images/avatar.jpg">
+  <p class="name" itemprop="name">Conless Pan</p>
+  <div class="description" itemprop="description">Stay hungry. Stay foolish.</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/blog/archives/">
+        <span class="count">12</span>
+        <span class="name">posts</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/blog/categories/">
+        <span class="count">6</span>
+        <span class="name">categories</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL0Nvbmxlc3M=" title="https:&#x2F;&#x2F;github.com&#x2F;Conless"><i class="ic i-github"></i></span>
+      <span class="exturl item twitter" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS9jb25sZXNzcGFu" title="https:&#x2F;&#x2F;twitter.com&#x2F;conlesspan"><i class="ic i-twitter"></i></span>
+      <span class="exturl item zhihu" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3Blb3BsZS95aS1mdS05Ny01NA==" title="https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;yi-fu-97-54"><i class="ic i-zhihu"></i></span>
+      <span class="exturl item email" data-url="bWFpbHRvOmNvbmxlc3NwYW5Ab3V0bG9vay5jb20=" title="mailto:conlesspan@outlook.com"><i class="ic i-envelope"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/blog/" rel="section"><i class="ic i-home"></i>Blog</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/blog/about/" rel="section"><i class="ic i-user"></i>About</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>Posts</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/blog/archives/" rel="section"><i class="ic i-list-alt"></i>Archives</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/blog/categories/" rel="section"><i class="ic i-th"></i>Categories</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/blog/tags/" rel="section"><i class="ic i-tags"></i>Tags</a>
+  </li>
+
+  </ul>
+        
+  <li class="item">
+    <a href="/blog/friends/" rel="section"><i class="ic i-heart"></i>friends</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/blog/links/" rel="section"><i class="ic i-magic"></i>links</a>
+  </li>
+
+  </ul>
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>Random Posts</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/blog/categories/cs/" title="In Computer Science">Computer Science</a>
+<i class="ic i-angle-right"></i>
+<a href="/blog/categories/cs/data-structure/" title="In Data Structure (CS1951@SJTU)">Data Structure (CS1951@SJTU)</a>
+</div>
+
+    <span><a href="/blog/cs/data-structure/vector/" title="数据结构（一）：STL vector">数据结构（一）：STL vector</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/blog/categories/math/" title="In Math">Math</a>
+</div>
+
+    <span><a href="/blog/math/texun-research/" title="2022 年寒假特训营研究报告">2022 年寒假特训营研究报告</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/blog/categories/jotting/" title="In Jottings">Jottings</a>
+</div>
+
+    <span><a href="/blog/jotting/senior-summary/" title="高中总结（一）">高中总结（一）</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/blog/categories/cs/" title="In Computer Science">Computer Science</a>
+</div>
+
+    <span><a href="/blog/cs/shulian-poufen/" title="数据结构（四）：树链剖分 (updating)">数据结构（四）：树链剖分 (updating)</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/blog/categories/cs/" title="In Computer Science">Computer Science</a>
+</div>
+
+    <span><a href="/blog/cs/hello-world/" title="Hello, World!">Hello, World!</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/blog/categories/cs/" title="In Computer Science">Computer Science</a>
+<i class="ic i-angle-right"></i>
+<a href="/blog/categories/cs/data-structure/" title="In Data Structure (CS1951@SJTU)">Data Structure (CS1951@SJTU)</a>
+</div>
+
+    <span><a href="/blog/cs/data-structure/priority_queue/" title="数据结构（三）：堆与 STL priority_queue">数据结构（三）：堆与 STL priority_queue</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/blog/categories/jotting/" title="In Jottings">Jottings</a>
+</div>
+
+    <span><a href="/blog/jotting/gaokao-summary/" title="尘埃落定">尘埃落定</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/blog/categories/default/" title="In Uncategorized">Uncategorized</a>
+</div>
+
+    <span><a href="/blog/default/update-log/" title="博客功能更新日志 (updating)">博客功能更新日志 (updating)</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/blog/categories/travel/" title="In Travel Notes">Travel Notes</a>
+</div>
+
+    <span><a href="/blog/travel/jiuzhai-travel-note/" title="九寨沟游记 (images to be fixed)">九寨沟游记 (images to be fixed)</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/blog/categories/cs/" title="In Computer Science">Computer Science</a>
+</div>
+
+    <span><a href="/blog/cs/gdkoi-note/" title="GDKOI2021 游记">GDKOI2021 游记</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>Recent Comments</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2021 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Conless Pan @ Dream Journal</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="Symbols count total">12k words</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="Reading time total">11 mins.</span>
+  </div>
+  <div class="powered-by">
+    Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '/cs/data-structure/priority_queue/',
+    favicon: {
+      show: "(●´3｀●) Nice to meet you again",
+      hide: "(´Д｀) See you later"
+    },
+    search : {
+      placeholder: "Search for Posts",
+      empty: "We didn't find any results for the search: ${query}",
+      stats: "${hits} results found in ${time} ms"
+    },
+    valine: true,fancybox: true,
+    copyright: 'Copied to clipboard successfully! <br> All articles in this blog are licensed under <i class="ic i-creative-commons"></i>BY-NC-SA.',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/blog/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
