@@ -25,12 +25,12 @@
 
   
 
-<link rel="canonical" href="https://conless.dev/blog/cs/data-structure/vector/">
+<link rel="canonical" href="https://conless.dev/blog/cs/data-structure/map/">
 
 
 
   <title>
-数据结构（一）：STL vector - Data Structure (CS1951@SJTU) - Computer Science |
+数据结构（三）：红黑树与 STL map - Data Structure (CS1951@SJTU) - Computer Science |
 Dream Journal = 夢の日記 = Conless 的梦境日志</title>
 <meta name="generator" content="Hexo 6.3.0"></head>
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -58,7 +58,7 @@ Dream Journal = 夢の日記 = Conless 的梦境日志</title>
         <div id="brand">
           <div class="pjax">
           
-  <h1 itemprop="name headline">数据结构（一）：STL vector
+  <h1 itemprop="name headline">数据结构（三）：红黑树与 STL map
   </h1>
   
 <div class="meta">
@@ -74,7 +74,7 @@ Dream Journal = 夢の日記 = Conless 的梦境日志</title>
       <i class="ic i-pen"></i>
     </span>
     <span class="text">Symbols count in article</span>
-    <span>0</span>
+    <span>1.3k</span>
     <span class="text">words</span>
   </span>
   <span class="item" title="Reading time">
@@ -115,12 +115,12 @@ Dream Journal = 夢の日記 = Conless 的梦境日志</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/6833939bly1giph4baakhj20zk0m8h5q.jpg"></li>
+          <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/6833939bly1giclx6phq6j20zk0m8e36.jpg"></li>
           <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/6833939bly1giclgrvbd6j20zk0m8qv5.jpg"></li>
-          <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/6833939bly1gicli3sbvtj20zk0m8x6p.jpg"></li>
-          <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/6833939bly1giclh5u05ej20zk0m87df.jpg"></li>
-          <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/illust_87652804_20220205_105506.png"></li>
-          <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/6833939bly1giclhpw3lwj20zk0m8gvw.jpg"></li>
+          <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/6833939bly1giclhtuo6nj20zk0m8ttm.jpg"></li>
+          <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/6833939bly1giclh3brzpj20zk0m8ann.jpg"></li>
+          <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/6833939bly1giph47e9vtj20zk0m8x6l.jpg"></li>
+          <li class="item" data-background-image="https://conless-imagehost.oss-cn-hangzhou.aliyuncs.com/images/6833939bly1gipexbei4hj20zk0m8npd.jpg"></li>
         </ul>
       </div>
     </header>
@@ -154,7 +154,7 @@ Dream Journal = 夢の日記 = Conless 的梦境日志</title>
 </div>
 
     <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
-  <link itemprop="mainEntityOfPage" href="https://conless.dev/blog/cs/data-structure/vector/">
+  <link itemprop="mainEntityOfPage" href="https://conless.dev/blog/cs/data-structure/map/">
 
   <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="image" content="/blog/images/avatar.jpg">
@@ -169,7 +169,94 @@ Dream Journal = 夢の日記 = Conless 的梦境日志</title>
   <div class="body md" itemprop="articleBody">
     
 
-    
+    <h1 id="红黑树"><a class="markdownIt-Anchor" href="#红黑树">#</a> 红黑树</h1>
+<p>红黑树是一种平衡树，其维持平衡的基本方式为保证每条路径上黑色节点的数量相同。</p>
+<h2 id="基础性质"><a class="markdownIt-Anchor" href="#基础性质">#</a> 基础性质</h2>
+<ol>
+<li>节点为红色或黑色</li>
+<li>空叶子节点（NIL）为黑色</li>
+<li>没有两个连续的红色节点</li>
+<li>从根到 NIL 的每条路径的黑色节点数量相同</li>
+</ol>
+<h2 id="结构"><a class="markdownIt-Anchor" href="#结构">#</a> 结构</h2>
+<p>一个节点需要包含的信息</p>
+<figure class="highlight cpp"><figcaption data-lang="C++"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">enum</span> <span class="token class-name">color</span><span class="token punctuation">&#123;</span> RED<span class="token punctuation">,</span> BLACK <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">struct</span> <span class="token class-name">tnode</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="3"></td><td><pre>    tnode <span class="token operator">*</span>left<span class="token punctuation">,</span> <span class="token operator">*</span>right<span class="token punctuation">,</span> <span class="token operator">*</span>parent<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="4"></td><td><pre>    color col<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="5"></td><td><pre>    Key key<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="6"></td><td><pre>    T data<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token punctuation">&#125;</span><span class="token punctuation">;</span></pre></td></tr></table></figure><p>整棵树需要储存的基本信息</p>
+<figure class="highlight cpp"><figcaption data-lang="C++"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">template</span> <span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token class-name">Key</span><span class="token punctuation">,</span> <span class="token keyword">class</span> <span class="token class-name">T</span><span class="token punctuation">,</span> <span class="token keyword">class</span> <span class="token class-name">Compare</span> <span class="token operator">=</span> std<span class="token double-colon punctuation">::</span>less<span class="token operator">&lt;</span>Key<span class="token operator">>></span> <span class="token keyword">class</span> <span class="token class-name">key</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="2"></td><td><pre>  <span class="token keyword">private</span><span class="token operator">:</span></pre></td></tr><tr><td data-num="3"></td><td><pre>    tnode <span class="token operator">*</span>rt<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="4"></td><td><pre>    size_t siz<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="5"></td><td><pre>  <span class="token keyword">public</span><span class="token operator">:</span></pre></td></tr><tr><td data-num="6"></td><td><pre>    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span></pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token punctuation">&#125;</span><span class="token punctuation">;</span></pre></td></tr></table></figure><h2 id="操作"><a class="markdownIt-Anchor" href="#操作">#</a> 操作</h2>
+<h3 id="旋转"><a class="markdownIt-Anchor" href="#旋转">#</a> 旋转</h3>
+<p>左旋是这样的：</p>
+<pre><code>  rt              r0
+ /  \            /  \
+l0   r0  ----&gt;  rt  r1
+    /  \       /  \
+   l1  r1     l0  l1
+</code></pre>
+<p>实际上，就是做了个根和右儿子的交换，其它东西放在能放的位置。</p>
+<p>右旋是这样的</p>
+<pre><code>    rt             l0
+   /  \           /  \
+  l0  r0  ----&gt;  l1  rt
+ /  \               /  \
+l1  r1             r1  r0
+</code></pre>
+<p>实际上，就是做了个根和左儿子的交换，其它东西放在能放的位置。</p>
+<h3 id="插入"><a class="markdownIt-Anchor" href="#插入">#</a> 插入</h3>
+<p>红黑树将新插入的节点初始化为红色节点，先按照正常 BST 的方式找到应该在哪里进行插入，此时，若父节点是黑色节点，显然没问题，若父节点 P 是非根的红色节点，分以下几种情况：</p>
+<ol>
+<li>当前节点的父节点 P 和叔节点 U 均为红色，这意味着祖父为黑，可以直接将祖父染红，P U 染黑</li>
+</ol>
+<pre><code>    BLACK             RED
+   /    \            /   \
+  RED   RED ----&gt; BLACK BLACK
+  /               /
+&lt;NEW&gt;           &lt;NEW&gt;
+</code></pre>
+<p>此时有可能有一个新的问题：要是祖父节点染红导致了性质破坏（连续红色节点）怎么办？这个时候可以递归地向上跳，不断进行维护，使得这一性质始终满足。这是染色中相对简单的情况。</p>
+<ol start="2">
+<li>当前节点的父节点 P 为红，但是叔节点 U 为黑，这个时候需要让新插入的节点在父节点的外侧节点上（如左儿子的外侧节点也为左儿子），如果不是的话，首先进行旋转操作：</li>
+</ol>
+<ul>
+<li>父节点在左子树上，旋转为 LL 的情况。</li>
+</ul>
+<pre><code>    BLACK               BLACK
+   /     \             /     \
+  RED   BLACK ----&gt;  &lt;NEW&gt;  BLACK
+ /  \                /  \
+A   &lt;NEW&gt;           RED  C
+    /   \          /  \
+   B     C        A    B
+</code></pre>
+<p>随后进行红黑树的 LLb 旋转，本质上就是父辈三个节点右旋</p>
+<pre><code>     BLACK                   RED
+    /     \                /    \
+   RED  BLACK            RED    BLACK
+  /  \          ----&gt;   /   \   /   \
+ RED  C                A     B C    BLACK
+ /  \
+A    B
+</code></pre>
+<p>注意其中 ABC 均为黑色节点，所以此时黑色节点个数不再平衡，需要进行染色，这一步操作也不困难，将 RED - BLACK 的连线改为 BLACK - RED 即可。</p>
+<ul>
+<li>父节点在右子树上，旋转为 RR 的情况。</li>
+</ul>
+<pre><code>      BLACK                 BLACK
+     /     \               /     \
+  BLACK    RED           BLACK   RED
+          /   \   ----&gt;         /   \
+        &lt;NEW&gt;  A               C    &lt;NEW&gt;
+        /   \                       /   \
+       B     C                     B     A
+</code></pre>
+<p>随后进行红黑树的 RRb 旋转，本质就是父辈三个节点左旋</p>
+<pre><code>     BLACK                RED
+    /     \             /     \
+  BLACK  RED ----&gt;   BLACK    RED
+         /  \        /   \    /  \
+        A   RED   BLACK   A  B    C
+           /   \
+          B     C
+</code></pre>
+<p>同理，将 RED - BLACK 连线改为 BLACK - RED。</p>
+
   </div>
 
    <footer>
@@ -182,7 +269,7 @@ Dream Journal = 夢の日記 = Conless 的梦境日志</title>
     <span class="text">Edited on</span>
     <time title="Modified: 2023-03-08 15:21:01" itemprop="dateModified" datetime="2023-03-08T15:21:01+08:00">2023-03-08</time>
   </span>
-  <span id="/cs/data-structure/vector/" class="item leancloud_visitors" data-flag-title="数据结构（一）：STL vector" title="Views">
+  <span id="/cs/data-structure/map/" class="item leancloud_visitors" data-flag-title="数据结构（三）：红黑树与 STL map" title="Views">
       <span class="icon">
         <i class="ic i-eye"></i>
       </span>
@@ -224,7 +311,7 @@ Dream Journal = 夢の日記 = Conless 的梦境日志</title>
   </li>
   <li class="link">
     <strong>Post link: </strong>
-    <a href="https://conless.dev/blog/cs/data-structure/vector/" title="数据结构（一）：STL vector">https://conless.dev/blog/cs/data-structure/vector/</a>
+    <a href="https://conless.dev/blog/cs/data-structure/map/" title="数据结构（三）：红黑树与 STL map">https://conless.dev/blog/cs/data-structure/map/</a>
   </li>
   <li class="license">
     <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
@@ -243,20 +330,20 @@ Dream Journal = 夢の日記 = Conless 的梦境日志</title>
     <div class="item left">
       
 
-  <a href="/blog/cs/data-structure/map/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;conless-imagehost.oss-cn-hangzhou.aliyuncs.com&#x2F;images&#x2F;6833939bly1giclhpw3lwj20zk0m8gvw.jpg" title="数据结构（三）：红黑树与 STL map">
+  <a href="/blog/cs/shulian-poufen/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;conless-imagehost.oss-cn-hangzhou.aliyuncs.com&#x2F;images&#x2F;6833939bly1giph47e9vtj20zk0m8x6l.jpg" title="数据结构（四）：树链剖分 (updating)">
   <span class="type">Previous Post</span>
-  <span class="category"><i class="ic i-flag"></i> Data Structure (CS1951@SJTU)</span>
-  <h3>数据结构（三）：红黑树与 STL map</h3>
+  <span class="category"><i class="ic i-flag"></i> Computer Science</span>
+  <h3>数据结构（四）：树链剖分 (updating)</h3>
   </a>
 
     </div>
     <div class="item right">
       
 
-  <a href="/blog/cs/data-structure/string_algo/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;conless-imagehost.oss-cn-hangzhou.aliyuncs.com&#x2F;images&#x2F;6833939bly1giph47e9vtj20zk0m8x6l.jpg" title="数据结构（二）：字符串算法">
+  <a href="/blog/cs/data-structure/vector/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;conless-imagehost.oss-cn-hangzhou.aliyuncs.com&#x2F;images&#x2F;6833939bly1gipexbei4hj20zk0m8npd.jpg" title="数据结构（一）：STL vector">
   <span class="type">Next Post</span>
   <span class="category"><i class="ic i-flag"></i> Data Structure (CS1951@SJTU)</span>
-  <h3>数据结构（二）：字符串算法</h3>
+  <h3>数据结构（一）：STL vector</h3>
   </a>
 
     </div>
@@ -275,10 +362,11 @@ Dream Journal = 夢の日記 = Conless 的梦境日志</title>
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="Contents">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BA%A2%E9%BB%91%E6%A0%91"><span class="toc-number">1.</span> <span class="toc-text"> 红黑树</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E6%80%A7%E8%B4%A8"><span class="toc-number">1.1.</span> <span class="toc-text"> 基础性质</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E6%9E%84"><span class="toc-number">1.2.</span> <span class="toc-text"> 结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C"><span class="toc-number">1.3.</span> <span class="toc-text"> 操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%8B%E8%BD%AC"><span class="toc-number">1.3.1.</span> <span class="toc-text"> 旋转</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%92%E5%85%A5"><span class="toc-number">1.3.2.</span> <span class="toc-text"> 插入</span></a></li></ol></li></ol></li></ol>
       </div>
       <div class="related panel pjax" data-title="Related">
         <ul>
-          <li class="active"><a href="/blog/cs/data-structure/vector/" rel="bookmark" title="数据结构（一）：STL vector">数据结构（一）：STL vector</a></li><li><a href="/blog/cs/data-structure/map/" rel="bookmark" title="数据结构（三）：红黑树与 STL map">数据结构（三）：红黑树与 STL map</a></li><li><a href="/blog/cs/data-structure/string_algo/" rel="bookmark" title="数据结构（二）：字符串算法">数据结构（二）：字符串算法</a></li><li><a href="/blog/cs/data-structure/priority_queue/" rel="bookmark" title="数据结构（三）：堆与 STL priority_queue">数据结构（三）：堆与 STL priority_queue</a></li>
+          <li><a href="/blog/cs/data-structure/vector/" rel="bookmark" title="数据结构（一）：STL vector">数据结构（一）：STL vector</a></li><li class="active"><a href="/blog/cs/data-structure/map/" rel="bookmark" title="数据结构（三）：红黑树与 STL map">数据结构（三）：红黑树与 STL map</a></li><li><a href="/blog/cs/data-structure/string_algo/" rel="bookmark" title="数据结构（二）：字符串算法">数据结构（二）：字符串算法</a></li><li><a href="/blog/cs/data-structure/priority_queue/" rel="bookmark" title="数据结构（三）：堆与 STL priority_queue">数据结构（三）：堆与 STL priority_queue</a></li>
         </ul>
       </div>
       <div class="overview panel" data-title="Overview">
@@ -364,12 +452,12 @@ Dream Journal = 夢の日記 = Conless 的梦境日志</title>
 
   <ul id="quick">
     <li class="prev pjax">
-        <a href="/blog/cs/data-structure/map/" rel="prev" title="Previous Post"><i class="ic i-chevron-left"></i></a>
+        <a href="/blog/cs/shulian-poufen/" rel="prev" title="Previous Post"><i class="ic i-chevron-left"></i></a>
     </li>
     <li class="up"><i class="ic i-arrow-up"></i></li>
     <li class="down"><i class="ic i-arrow-down"></i></li>
     <li class="next pjax">
-        <a href="/blog/cs/data-structure/string_algo/" rel="next" title="Next Post"><i class="ic i-chevron-right"></i></a>
+        <a href="/blog/cs/data-structure/vector/" rel="next" title="Next Post"><i class="ic i-chevron-right"></i></a>
     </li>
     <li class="percent"></li>
   </ul>
@@ -392,11 +480,9 @@ Dream Journal = 夢の日記 = Conless 的梦境日志</title>
     
 <div class="breadcrumb">
 <a href="/blog/categories/cs/" title="In Computer Science">Computer Science</a>
-<i class="ic i-angle-right"></i>
-<a href="/blog/categories/cs/data-structure/" title="In Data Structure (CS1951@SJTU)">Data Structure (CS1951@SJTU)</a>
 </div>
 
-    <span><a href="/blog/cs/data-structure/priority_queue/" title="数据结构（三）：堆与 STL priority_queue">数据结构（三）：堆与 STL priority_queue</a></span>
+    <span><a href="/blog/cs/gdkoi-note/" title="GDKOI2021 游记">GDKOI2021 游记</a></span>
   </li>
 
       
@@ -407,6 +493,16 @@ Dream Journal = 夢の日記 = Conless 的梦境日志</title>
 </div>
 
     <span><a href="/blog/travel/fangsuo-travel-note/" title="重逢方所 (images to be fixed)">重逢方所 (images to be fixed)</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/blog/categories/jotting/" title="In Jottings">Jottings</a>
+</div>
+
+    <span><a href="/blog/jotting/senior-summary/" title="高中总结（一）">高中总结（一）</a></span>
   </li>
 
       
@@ -425,12 +521,10 @@ Dream Journal = 夢の日記 = Conless 的梦境日志</title>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/blog/categories/cs/" title="In Computer Science">Computer Science</a>
-<i class="ic i-angle-right"></i>
-<a href="/blog/categories/cs/data-structure/" title="In Data Structure (CS1951@SJTU)">Data Structure (CS1951@SJTU)</a>
+<a href="/blog/categories/jotting/" title="In Jottings">Jottings</a>
 </div>
 
-    <span><a href="/blog/cs/data-structure/string_algo/" title="数据结构（二）：字符串算法">数据结构（二）：字符串算法</a></span>
+    <span><a href="/blog/jotting/gaokao-summary/" title="尘埃落定">尘埃落定</a></span>
   </li>
 
       
@@ -447,30 +541,10 @@ Dream Journal = 夢の日記 = Conless 的梦境日志</title>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/blog/categories/jotting/" title="In Jottings">Jottings</a>
+<a href="/blog/categories/math/" title="In Math">Math</a>
 </div>
 
-    <span><a href="/blog/jotting/gaokao-summary/" title="尘埃落定">尘埃落定</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/blog/categories/cs/" title="In Computer Science">Computer Science</a>
-</div>
-
-    <span><a href="/blog/cs/gdkoi-note/" title="GDKOI2021 游记">GDKOI2021 游记</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/blog/categories/travel/" title="In Travel Notes">Travel Notes</a>
-</div>
-
-    <span><a href="/blog/travel/jiuzhai-travel-note/" title="九寨沟游记 (images to be fixed)">九寨沟游记 (images to be fixed)</a></span>
+    <span><a href="/blog/math/texun-research/" title="2022 年寒假特训营研究报告">2022 年寒假特训营研究报告</a></span>
   </li>
 
       
@@ -488,9 +562,21 @@ Dream Journal = 夢の日記 = Conless 的梦境日志</title>
     
 <div class="breadcrumb">
 <a href="/blog/categories/cs/" title="In Computer Science">Computer Science</a>
+<i class="ic i-angle-right"></i>
+<a href="/blog/categories/cs/data-structure/" title="In Data Structure (CS1951@SJTU)">Data Structure (CS1951@SJTU)</a>
 </div>
 
-    <span><a href="/blog/cs/hello-world/" title="Hello, World!">Hello, World!</a></span>
+    <span><a href="/blog/cs/data-structure/string_algo/" title="数据结构（二）：字符串算法">数据结构（二）：字符串算法</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/blog/categories/travel/" title="In Travel Notes">Travel Notes</a>
+</div>
+
+    <span><a href="/blog/travel/jiuzhai-travel-note/" title="九寨沟游记 (images to be fixed)">九寨沟游记 (images to be fixed)</a></span>
   </li>
 
   </ul>
@@ -533,7 +619,7 @@ Dream Journal = 夢の日記 = Conless 的梦境日志</title>
   </div>
 <script data-config type="text/javascript">
   var LOCAL = {
-    path: '/cs/data-structure/vector/',
+    path: '/cs/data-structure/map/',
     favicon: {
       show: "(●´3｀●) Nice to meet you again",
       hide: "(´Д｀) See you later"
